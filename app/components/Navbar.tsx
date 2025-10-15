@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,8 +12,8 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-14">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#">
-              <h1 className="text-xl font-bold text-gray-900 dark:text-white">VG</h1>
+            <a href="#" className="flex items-center">
+              <Logo className="h-7 w-auto" />
             </a>
           </div>
 
