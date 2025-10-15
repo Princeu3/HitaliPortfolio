@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Valentin Gil",
-  description: "French bachelor's degree student in Multimedia and Internet Technologies",
+  description: "Étudiant en BUT Métiers du Multimédia et de l'Internet",
   openGraph: {
     title: "Valentin Gil",
-    description: "French bachelor's degree student in Multimedia and Internet Technologies",
+    description: "Étudiant en BUT Métiers du Multimédia et de l'Internet",
     url: "https://vgil.fr",
     siteName: "Valentin Gil",
     images: [
