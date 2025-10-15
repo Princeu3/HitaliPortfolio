@@ -33,15 +33,12 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Valentin Gil",
     description: "French bachelor's degree student in Multimedia and Internet Technologies",
     images: ["/thumbnail.png"],
   },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
-  ],
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
