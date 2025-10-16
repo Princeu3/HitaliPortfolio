@@ -7,11 +7,15 @@ import { siteStructuredData } from "./seo-jsonld";
 const geist = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap", // Améliore FCP et LCP
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: false, // Chargement différé pour la police mono
 });
 
 export const metadata: Metadata = {
