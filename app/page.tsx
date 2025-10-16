@@ -9,7 +9,7 @@ import { ThemeProvider } from "./components/theme-provider";
 // Chargement différé pour améliorer TBT
 const Beams = dynamic(() => import("./components/Beams"), {
   ssr: false,
-  loading: () => <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-gray-100 dark:to-gray-900 animate-pulse" />,
+  loading: () => <div className="absolute inset-0 w-full h-full bg-white dark:bg-[#191919]" />,
 });
 
 export default function Home() {
@@ -19,17 +19,18 @@ export default function Home() {
         {/* Section avec Beams en fond - 100vh */}
         <div className="relative h-screen">
           {/* Beams en arrière-plan */}
-          <Suspense fallback={<div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-gray-100 dark:to-gray-900" />}></Suspense>
           <div className="absolute inset-0 w-full h-full -z-10">
-            <Beams
-              beamWidth={3}
-              beamHeight={30}
-              beamNumber={20}
-              speed={2}
-              noiseIntensity={2}
-              scale={0.2}
-              rotation={30}
-            />
+            <Suspense fallback={<div className="absolute inset-0 w-full h-full bg-white dark:bg-[#191919]" />}>
+              <Beams
+                beamWidth={3}
+                beamHeight={25}
+                beamNumber={10}
+                speed={2}
+                noiseIntensity={2}
+                scale={0.2}
+                rotation={30}
+              />
+            </Suspense>
           </div>
           
           <Navbar />
