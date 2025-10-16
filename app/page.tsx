@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar";
 import Beams from "./components/Beams";
 import { ThemeProvider } from "./components/theme-provider";
-import { ModeToggle } from "./components/ModeToggle";
 
 export default function Home() {
   return (

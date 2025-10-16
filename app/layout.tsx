@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import { siteStructuredData } from "./seo-jsonld";
 
 const geist = Geist({
   variable: "--font-geist-sans",
@@ -14,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://vgil.fr'),
   title: "Valentin Gil",
   description: "Étudiant en BUT Métiers du Multimédia et de l'Internet",
   icons: {
@@ -48,6 +50,9 @@ export const metadata: Metadata = {
     description: "French bachelor's degree student in Multimedia and Internet Technologies",
     images: ["/thumbnail.png"],
   },
+};
+
+export const viewport = {
   themeColor: "#ffffff",
 };
 
@@ -58,6 +63,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
+      <head>
+        <script
+          key="ldjson"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteStructuredData) }}
+        />
+      </head>
       <body className={`${geist.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
