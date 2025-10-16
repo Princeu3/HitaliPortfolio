@@ -78,11 +78,26 @@ function extendMaterial<T extends THREE.Material = THREE.Material>(
   return mat;
 }
 
-const CanvasWrapper: FC<{ children: ReactNode }> = ({ children }) => (
-  <Canvas dpr={[1, 2]} frameloop="always" className="w-full h-full relative">
-    {children}
-  </Canvas>
-);
+const CanvasWrapper: FC<{ children: ReactNode }> = ({ children }) => {
+  const [opacity, setOpacity] = useState(0);
+
+  useEffect(() => {
+    // Démarre la transition après le montage
+    const timer = setTimeout(() => setOpacity(1), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <Canvas 
+      dpr={[1, 2]} 
+      frameloop="always" 
+      className="w-full h-full relative transition-opacity duration-1000"
+      style={{ opacity }}
+    >
+      {children}
+    </Canvas>
+  );
+};
 
 const hexToNormalizedRGB = (hex: string): [number, number, number] => {
   const clean = hex.replace('#', '');
