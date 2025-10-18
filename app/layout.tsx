@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://vgil.fr'),
   title: "Valentin Gil",
-  description: "Étudiant en BUT Métiers du Multimédia et de l'Internet",
+  description: "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
   icons: {
     icon: [
       { url: '/favicon.ico', type: 'image/x-icon' },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
   openGraph: {
     title: "Valentin Gil",
-    description: "Étudiant en BUT Métiers du Multimédia et de l'Internet",
+    description: "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
     url: "https://vgil.fr",
     siteName: "Valentin Gil",
     images: [
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: "Valentin Gil",
-    description: "French bachelor's degree student in Multimedia and Internet Technologies",
+    description: "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
     images: ["/thumbnail.png"],
   },
 };
