@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 
 export const metadata: Metadata = {
   title: "Mentions Légales - Valentin Gil",
@@ -71,16 +71,16 @@ export default function MentionsLegales() {
               3. Propriété intellectuelle
             </h2>
             <p>
-              L'ensemble des éléments du site (textes, images, graphismes,
-              logos, etc.) sont, sauf mention contraire, la propriété exclusive
-              de Valentin Gil. <br />
-              Toute reproduction, modification, distribution ou utilisation,
-              totale ou partielle, de ces éléments sans autorisation écrite
-              préalable est strictement interdite et constitue une violation des
-              droits d'auteur. <br />
-              Certaines ressources utilisées sur le site (polices, icônes,
-              bibliothèques JavaScript) restent la propriété de leurs auteurs
-              respectifs et sont utilisées conformément à leurs licenses.
+              L&apos;ensemble des éléments du site (textes, images, graphismes,
+                logos, etc.) sont, sauf mention contraire, la propriété exclusive
+                de Valentin Gil. <br />
+                Toute reproduction, modification, distribution ou utilisation,
+                totale ou partielle, de ces éléments sans autorisation écrite
+                préalable est strictement interdite et constitue une violation des
+                droits d&apos;auteur. <br />
+                Certaines ressources utilisées sur le site (polices, icônes,
+                bibliothèques JavaScript) restent la propriété de leurs auteurs
+                respectifs et sont utilisées conformément à leurs licenses.
             </p>
           </section>
 
@@ -90,14 +90,14 @@ export default function MentionsLegales() {
             </h2>
             <p>
               Les informations recueillies via le formulaire de contact sont
-              utilisées uniquement pour répondre aux demandes envoyées par
-              l'utilisateur. Les données sont conservées pour une durée maximale
-              de 3 ans, sauf obligation légale contraire, et ne sont jamais
-              revendues à des tiers. Conformément au Règlement Général sur la
-              Protection des Données (RGPD), vous disposez d&apos;un droit
-              d&apos;accès, de rectification, d'opposition et de suppression de
-              vos données personnelles. Pour exercer ce droit, vous pouvez
-              envoyer une demande à l'adresse suivante :{" "}
+                utilisées uniquement pour répondre aux demandes envoyées par
+                l&apos;utilisateur. Les données sont conservées pour une durée maximale
+                de 3 ans, sauf obligation légale contraire, et ne sont jamais
+                revendues à des tiers. Conformément au Règlement Général sur la
+                Protection des Données (RGPD), vous disposez d&apos;un droit
+                d&apos;accès, de rectification, d&apos;opposition et de suppression de
+                vos données personnelles. Pour exercer ce droit, vous pouvez
+                envoyer une demande à l&apos;adresse suivante :{" "}
               <a
                 href="mailto:contact@vgil.fr"
                 className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white underline underline-offset-2 transition-colors"
@@ -110,23 +110,23 @@ export default function MentionsLegales() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">5. Responsabilité</h2>
             <p>
-              L'éditeur du site ne pourra être tenu responsable des erreurs ou
-              omissions présentes sur le site, ou de tout problème technique
-              rencontré par l'utilisateur. Le site peut contenir des liens
-              hypertextes vers d'autres sites internet. L'éditeur n'exerce aucun
-              contrôle sur ces sites et décline toute responsabilité quant à
-              leurs contenus.
+              L&apos;éditeur du site ne pourra être tenu responsable des erreurs ou
+                omissions présentes sur le site, ou de tout problème technique
+                rencontré par l&apos;utilisateur. Le site peut contenir des liens
+                hypertextes vers d&apos;autres sites internet. L&apos;éditeur n&apos;exerce aucun
+                contrôle sur ces sites et décline toute responsabilité quant à
+                leurs contenus.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">6. Cookies</h2>
             <p>
-              Le site n'utilise que des cookies nécessaires à son bon
-              fonctionnement. Aucun cookie de suivi ou de publicité n'est
-              utilisé. Vous pouvez désactiver les cookies dans les paramètres de
-              votre navigateur, mais cela peut affecter certaines
-              fonctionnalités du site.
+              Le site n&apos;utilise que des cookies nécessaires à son bon
+                fonctionnement. Aucun cookie de suivi ou de publicité n&apos;est
+                utilisé. Vous pouvez désactiver les cookies dans les paramètres de
+                votre navigateur, mais cela peut affecter certaines
+                fonctionnalités du site.
             </p>
           </section>
         </div>
