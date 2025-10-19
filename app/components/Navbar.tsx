@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-14">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#" className="flex items-center" aria-label="Retour à l'accueil">
+            <a href="/" className="flex items-center" aria-label="Retour à l'accueil">
               <Logo className="h-7 w-auto" />
             </a>
           </div>
