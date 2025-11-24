@@ -21,25 +21,25 @@ export default function Navbar() {
           {/* Menu Desktop */}
           <div className="hidden md:block ml-8">
             <ul className="flex items-baseline space-x-2">
-              <a href="/#" className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group">
+              <a href="#" className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group">
                 <li className="group overflow-hidden relative">
                   <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">Accueil</div>
                   <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">Accueil</div>
                 </li>
               </a>
-              <a href="/#about" className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group">
+              <a href="#about" className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group">
                 <li className="group overflow-hidden relative">
                   <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">À propos</div>
                   <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">À propos</div>
                 </li>
               </a>
-              <a href="/#projets" className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group">
+              <a href="#projets" className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group">
                 <li className="group overflow-hidden relative">
                   <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">Projets</div>
                   <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">Projets</div>
                 </li>
               </a>
-              <a href="/#contact" className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group">
+              <a href="#contact" className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group">
                 <li className="group overflow-hidden relative">
                   <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">Contact</div>
                   <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">Contact</div>
