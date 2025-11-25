@@ -174,14 +174,13 @@ export default function Navbar() {
           <ul className="space-y-8 text-center">
             {isLegalPage ? (
               <li role="none" className="animate-fade-in-delay-1">
-                <a 
-                  href="/" 
+                <Link
+                  href="/"
                   onClick={handleLinkClick}
                   className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block" 
-                  role="menuitem"
                 >
-                  Retour à l'accueil
-                </a>
+                  Retour à l&apos;accueil
+                </Link>
               </li>
             ) : (
               <>

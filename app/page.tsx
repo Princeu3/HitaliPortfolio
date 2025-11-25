@@ -2,7 +2,6 @@
 
 import { Suspense } from "react";
 import Navbar from "./components/Navbar";
-import { ModeToggle } from "./components/ModeToggle";
 import { ThemeProvider } from "./components/theme-provider";
 import LazyBeams from "./components/LazyBeams";
 
@@ -81,8 +80,8 @@ export default function Home() {
         <section id="about" className="py-32 bg-gray-50 dark:bg-[#18181b]">
           <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">À propos</h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-2">Je m'appelle Valentin Gil, étudiant en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême. Passionné par le web, j'aime concevoir des interfaces modernes, accessibles et performantes.</p>
-            <p className="text-lg text-gray-700 dark:text-gray-300">J'utilise principalement Next.js, React, Tailwind CSS et je m'intéresse à l'UX/UI, l'accessibilité et l'optimisation des performances.</p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-2">Je m&apos;appelle Valentin Gil, étudiant en BUT Métiers du Multimédia et de l&apos;Internet à l&apos;IUT d&apos;Angoulême. Passionné par le web, j&apos;aime concevoir des interfaces modernes, accessibles et performantes.</p>
+            <p className="text-lg text-gray-700 dark:text-gray-300">J&apos;utilise principalement Next.js, React, Tailwind CSS et je m&apos;intéresse à l&apos;UX/UI, l&apos;accessibilité et l&apos;optimisation des performances.</p>
           </div>
         </section>
 
@@ -107,7 +106,7 @@ export default function Home() {
         <section id="contact" className="py-32 bg-gray-50 dark:bg-[#18181b]">
           <div className="max-w-xl mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Contact</h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">Envie de collaborer, de me proposer un stage ou simplement d'échanger ?</p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">Envie de collaborer, de me proposer un stage ou simplement d&apos;échanger ?</p>
             <a href="mailto:contact@vgil.fr" className="inline-block px-8 py-4 rounded-full bg-primary text-white font-semibold shadow hover:bg-primary/90 transition">Me contacter</a>
           </div>
         </section>

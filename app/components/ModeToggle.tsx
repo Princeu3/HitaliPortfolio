@@ -101,7 +101,7 @@ export function ModeToggle() {
 
   const toggleTheme = () => {
     // Vérifier si l'API View Transition est supportée
-    const doc = document as any
+    const doc = document as Document & { startViewTransition?: (callback: () => void) => void }
     if (doc.startViewTransition) {
       doc.startViewTransition(() => {
         setTheme(resolvedTheme === "dark" ? "light" : "dark")
