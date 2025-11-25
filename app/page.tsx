@@ -378,7 +378,7 @@ export default function Home() {
                     className="inline-flex items-center gap-2 px-6 py-3 bg-[#191919] dark:bg-white text-white dark:text-[#191919] rounded-lg text-base font-semibold hover:opacity-80 transition-opacity duration-300"
                   >
                     Télécharger mon CV
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
                   </a>
                 </div>
               </div>
@@ -406,6 +406,13 @@ export default function Home() {
                 description="Site web interactif permettant aux utilisateurs de voter pour leurs designs d'affiches de films préférés. Interface intuitive avec système de vote en temps réel et options d'accessibilité."
                 date="14/06/2025"
                 tags={["PHP", "CSS", "JS"]}
+              />
+              <ProjectCard
+                images={["/mmi-planning-1.png", "/mmi-planning-2.png", "/mmi-planning-3.png"]}
+                title="MMI Planning"
+                description="Application web pour consulter son emploi du temps et ceux des autres groupes d'élèves, actualisé en temps réel avec possibilité de partager les cours entre utilisateurs."
+                date="08/09/2025"
+                tags={["React", "TypeScript", "Vite"]}
               />
             </div>
           </div>
