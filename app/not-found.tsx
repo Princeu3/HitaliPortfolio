@@ -102,13 +102,31 @@ export default function NotFound() {
           >
             <div className="relative mb-8">
               {/* SVG pour mobile */}
-              <svg className="absolute top-10 left-1/2 -translate-x-1/2 -z-10 h-[9rem] md:hidden" viewBox="0 0 400 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg
+                className="absolute top-10 left-1/2 -translate-x-1/2 -z-10 h-[9rem] md:hidden"
+                viewBox="0 0 400 150"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
                 <defs>
-                  <linearGradient id="strokeGradient404MobileLight" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <linearGradient
+                    id="strokeGradient404MobileLight"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
                     <stop offset="60%" stopColor="#191919" stopOpacity="0" />
                     <stop offset="100%" stopColor="#191919" stopOpacity="1" />
                   </linearGradient>
-                  <linearGradient id="strokeGradient404MobileDark" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <linearGradient
+                    id="strokeGradient404MobileDark"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
                     <stop offset="60%" stopColor="#ffffff" stopOpacity="0" />
                     <stop offset="100%" stopColor="#ffffff" stopOpacity="1" />
                   </linearGradient>
@@ -120,57 +138,97 @@ export default function NotFound() {
                   }
                   .dark .text-404-mobile { stroke: url(#strokeGradient404MobileDark); }
                 `}</style>
-                <text 
-                  x="50%" 
-                  y="50%" 
-                  dominantBaseline="middle" 
-                  textAnchor="middle" 
+                <text
+                  x="50%"
+                  y="50%"
+                  dominantBaseline="middle"
+                  textAnchor="middle"
                   className="text-404-mobile font-bold"
                   fill="transparent"
                   strokeWidth="2"
-                  style={{ fontSize: '133px', fontFamily: 'inherit' }}
+                  style={{ fontSize: "133px", fontFamily: "inherit" }}
                 >
                   404
                 </text>
               </svg>
               {/* SVG pour tablette */}
-              <svg className="absolute top-18 left-1/2 -translate-x-1/2 -z-10 h-[12rem] hidden md:block lg:hidden" viewBox="0 0 500 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg
+                className="absolute top-18 left-1/2 -translate-x-1/2 -z-10 h-[12rem] hidden md:block lg:hidden"
+                viewBox="0 0 500 150"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
                 <defs>
-                  <linearGradient id="strokeGradient404Tablet" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="60%" stopColor="currentColor" stopOpacity="0" />
-                    <stop offset="100%" stopColor="currentColor" stopOpacity="1" />
+                  <linearGradient
+                    id="strokeGradient404Tablet"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="60%"
+                      stopColor="currentColor"
+                      stopOpacity="0"
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="currentColor"
+                      stopOpacity="1"
+                    />
                   </linearGradient>
                 </defs>
-                <text 
-                  x="50%" 
-                  y="50%" 
-                  dominantBaseline="middle" 
-                  textAnchor="middle" 
+                <text
+                  x="50%"
+                  y="50%"
+                  dominantBaseline="middle"
+                  textAnchor="middle"
                   className="font-bold fill-transparent"
-                  stroke="url(#strokeGradient404Tablet)" 
+                  stroke="url(#strokeGradient404Tablet)"
                   strokeWidth="2"
-                  style={{ fontSize: '149px', fontFamily: 'inherit' }}
+                  style={{ fontSize: "149px", fontFamily: "inherit" }}
                 >
                   404
                 </text>
               </svg>
               {/* SVG pour desktop */}
-              <svg className="absolute top-24 left-1/2 -translate-x-1/2 -z-10 h-[16rem] hidden lg:block" viewBox="0 0 600 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg
+                className="absolute top-24 left-1/2 -translate-x-1/2 -z-10 h-[16rem] hidden lg:block"
+                viewBox="0 0 600 150"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
                 <defs>
-                  <linearGradient id="strokeGradient404Desktop" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="60%" stopColor="currentColor" stopOpacity="0" />
-                    <stop offset="100%" stopColor="currentColor" stopOpacity="1" />
+                  <linearGradient
+                    id="strokeGradient404Desktop"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="60%"
+                      stopColor="currentColor"
+                      stopOpacity="0"
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="currentColor"
+                      stopOpacity="1"
+                    />
                   </linearGradient>
                 </defs>
-                <text 
-                  x="50%" 
-                  y="50%" 
-                  dominantBaseline="middle" 
-                  textAnchor="middle" 
+                <text
+                  x="50%"
+                  y="50%"
+                  dominantBaseline="middle"
+                  textAnchor="middle"
                   className="font-bold fill-transparent"
-                  stroke="url(#strokeGradient404Desktop)" 
+                  stroke="url(#strokeGradient404Desktop)"
                   strokeWidth="2"
-                  style={{ fontSize: '149px', fontFamily: 'inherit' }}
+                  style={{ fontSize: "149px", fontFamily: "inherit" }}
                 >
                   404
                 </text>

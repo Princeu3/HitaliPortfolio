@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playfair_Display, Dancing_Script } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Playfair_Display,
+  Dancing_Script,
+} from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { siteStructuredData } from "./seo-jsonld";
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geist = Geist({
   variable: "--font-geist-sans",
@@ -21,22 +26,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://vgil.fr'),
+  metadataBase: new URL("https://vgil.fr"),
   title: "Valentin Gil - Portfolio",
-  description: "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
+  description:
+    "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
   icons: {
     icon: [
-      { url: '/favicon.ico', type: 'image/x-icon' },
-      { url: '/favicon.svg', type: 'image/svg+xml' }
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
     ],
-    apple: [
-      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
-  manifest: '/site.webmanifest',
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "Valentin Gil - Portfolio",
-    description: "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
+    description:
+      "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
     url: "https://vgil.fr",
     siteName: "Valentin Gil - Portfolio",
     images: [
@@ -53,7 +58,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: "Valentin Gil - Portfolio",
-    description: "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
+    description:
+      "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
     images: ["/thumbnail.png"],
   },
 };
@@ -73,7 +79,9 @@ export default function RootLayout({
         <script
           key="ldjson"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteStructuredData) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(siteStructuredData),
+          }}
         />
       </head>
       <body className={`${geist.variable} ${geistMono.variable} antialiased`}>

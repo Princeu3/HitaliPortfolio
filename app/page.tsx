@@ -9,46 +9,50 @@ import ProjectCard from "./components/ProjectCard";
 
 export default function Home() {
   const [formData, setFormData] = useState({
-    nom: '',
-    prenom: '',
-    email: '',
-    message: ''
+    nom: "",
+    prenom: "",
+    email: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus('idle');
+    setSubmitStatus("idle");
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ nom: '', prenom: '', email: '', message: '' });
+        setSubmitStatus("success");
+        setFormData({ nom: "", prenom: "", email: "", message: "" });
       } else {
-        setSubmitStatus('error');
+        setSubmitStatus("error");
       }
     } catch (error) {
-      console.error('Erreur:', error);
-      setSubmitStatus('error');
+      console.error("Erreur:", error);
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -147,13 +151,31 @@ export default function Home() {
           >
             <div className="relative mb-8">
               {/* SVG pour mobile */}
-              <svg className="absolute top-3 left-1/2 -translate-x-1/2 -z-10 h-[6rem] w-auto max-w-[95vw] md:hidden" viewBox="0 0 600 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg
+                className="absolute top-3 left-1/2 -translate-x-1/2 -z-10 h-[6rem] w-auto max-w-[95vw] md:hidden"
+                viewBox="0 0 600 150"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
                 <defs>
-                  <linearGradient id="strokeGradientMobileLight" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <linearGradient
+                    id="strokeGradientMobileLight"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
                     <stop offset="60%" stopColor="#191919" stopOpacity="0" />
                     <stop offset="100%" stopColor="#191919" stopOpacity="1" />
                   </linearGradient>
-                  <linearGradient id="strokeGradientMobileDark" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <linearGradient
+                    id="strokeGradientMobileDark"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
                     <stop offset="60%" stopColor="#ffffff" stopOpacity="0" />
                     <stop offset="100%" stopColor="#ffffff" stopOpacity="1" />
                   </linearGradient>
@@ -165,64 +187,102 @@ export default function Home() {
                   }
                   .dark .text-name-mobile { stroke: url(#strokeGradientMobileDark); }
                 `}</style>
-                <text 
-                  x="50%" 
-                  y="50%" 
-                  dominantBaseline="middle" 
-                  textAnchor="middle" 
+                <text
+                  x="50%"
+                  y="50%"
+                  dominantBaseline="middle"
+                  textAnchor="middle"
                   className="text-name-mobile font-bold"
                   fill="transparent"
                   strokeWidth="2"
-                  style={{ fontSize: '94px', fontFamily: 'inherit' }}
+                  style={{ fontSize: "94px", fontFamily: "inherit" }}
                 >
                   Valentin Gil
                 </text>
               </svg>
               {/* SVG pour tablette */}
-              <svg className="absolute top-7 left-1/2 -translate-x-1/2 -z-10 h-[8rem] hidden md:block lg:hidden" viewBox="0 0 800 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg
+                className="absolute top-7 left-1/2 -translate-x-1/2 -z-10 h-[8rem] hidden md:block lg:hidden"
+                viewBox="0 0 800 150"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
                 <defs>
-                  <linearGradient id="strokeGradientTablet" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="60%" stopColor="currentColor" stopOpacity="0" />
-                    <stop offset="100%" stopColor="currentColor" stopOpacity="1" />
+                  <linearGradient
+                    id="strokeGradientTablet"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="60%"
+                      stopColor="currentColor"
+                      stopOpacity="0"
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="currentColor"
+                      stopOpacity="1"
+                    />
                   </linearGradient>
                 </defs>
-                <text 
-                  x="50%" 
-                  y="50%" 
-                  dominantBaseline="middle" 
-                  textAnchor="middle" 
+                <text
+                  x="50%"
+                  y="50%"
+                  dominantBaseline="middle"
+                  textAnchor="middle"
                   className="font-bold fill-transparent"
-                  stroke="url(#strokeGradientTablet)" 
+                  stroke="url(#strokeGradientTablet)"
                   strokeWidth="2"
-                  style={{ fontSize: '112px', fontFamily: 'inherit' }}
+                  style={{ fontSize: "112px", fontFamily: "inherit" }}
                 >
                   Valentin Gil
                 </text>
               </svg>
               {/* SVG pour desktop */}
-              <svg className="absolute top-12 left-1/2 -translate-x-1/2 -z-10 h-[9rem] hidden lg:block" viewBox="0 0 800 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg
+                className="absolute top-12 left-1/2 -translate-x-1/2 -z-10 h-[9rem] hidden lg:block"
+                viewBox="0 0 800 150"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
                 <defs>
-                  <linearGradient id="strokeGradientDesktop" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="60%" stopColor="currentColor" stopOpacity="0" />
-                    <stop offset="100%" stopColor="currentColor" stopOpacity="1" />
+                  <linearGradient
+                    id="strokeGradientDesktop"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="60%"
+                      stopColor="currentColor"
+                      stopOpacity="0"
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="currentColor"
+                      stopOpacity="1"
+                    />
                   </linearGradient>
                 </defs>
-                <text 
-                  x="50%" 
-                  y="50%" 
-                  dominantBaseline="middle" 
-                  textAnchor="middle" 
+                <text
+                  x="50%"
+                  y="50%"
+                  dominantBaseline="middle"
+                  textAnchor="middle"
                   className="font-bold fill-transparent"
-                  stroke="url(#strokeGradientDesktop)" 
+                  stroke="url(#strokeGradientDesktop)"
                   strokeWidth="2"
-                  style={{ fontSize: '133px', fontFamily: 'inherit' }}
+                  style={{ fontSize: "133px", fontFamily: "inherit" }}
                 >
                   Valentin Gil
                 </text>
               </svg>
-              <h1 
-                className="text-6xl md:text-8xl lg:text-9xl font-bold text-center relative z-10 whitespace-nowrap"
-              >
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-center relative z-10 whitespace-nowrap">
                 Valentin Gil
               </h1>
             </div>
@@ -230,7 +290,12 @@ export default function Home() {
             {/* Flèche de scroll */}
             <a
               href="#a-propos"
-              onClick={(e) => { e.preventDefault(); document.querySelector('#a-propos')?.scrollIntoView({ behavior: 'smooth' }); }}
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .querySelector("#a-propos")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="absolute bottom-12 left-1/2 -translate-x-1/2 group"
               aria-label="Descendre vers la section À Propos"
             >
@@ -253,7 +318,10 @@ export default function Home() {
         </div>
 
         {/* Section À propos */}
-        <section id="a-propos" className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]">
+        <section
+          id="a-propos"
+          className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]"
+        >
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
             {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
@@ -270,14 +338,16 @@ export default function Home() {
               {/* Photo de profil */}
               <div className="flex-shrink-0 w-full lg:w-auto">
                 <div className="relative w-full h-80 sm:w-72 sm:h-[22rem] sm:mx-auto lg:mx-0 rounded-[1.5rem] overflow-hidden group">
-                  <img 
-                    src="/valentin-gil.jpg" 
-                    alt="Valentin Gil" 
+                  <img
+                    src="/valentin-gil.jpg"
+                    alt="Valentin Gil"
                     className="w-full h-full object-cover object-top"
                   />
                   {/* Tag crédit photo */}
                   <div className="absolute bottom-3 left-3 px-3 py-1.5 bg-black/70 dark:bg-white/80 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-xs text-white dark:text-black font-medium">📸 Arthur Binchet</p>
+                    <p className="text-xs text-white dark:text-black font-medium">
+                      📸 Arthur Binchet
+                    </p>
                   </div>
                 </div>
               </div>
@@ -296,8 +366,16 @@ export default function Home() {
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
                   <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-[#e5e5e5]/80 dark:bg-[#2a2a2a]/80 rounded-full text-xs sm:text-sm font-medium text-[#191919] dark:text-white transition-colors">
-                    <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#191919] dark:text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    <svg
+                      className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#191919] dark:text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                     Angoulême
                   </span>
@@ -314,7 +392,10 @@ export default function Home() {
 
                 {/* Description */}
                 <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-3xl leading-relaxed mb-12">
-                  Étudiant en BUT MMI, c&apos;est au cours de ma première année que je me suis découvert une passion pour le développement web et le design. Aujourd&apos;hui, je conçois des interfaces modernes et performantes, du wireframe au produit final.
+                  Étudiant en BUT MMI, c&apos;est au cours de ma première année
+                  que je me suis découvert une passion pour le développement web
+                  et le design. Aujourd&apos;hui, je conçois des interfaces
+                  modernes et performantes, du wireframe au produit final.
                 </p>
 
                 {/* Parcours */}
@@ -324,20 +405,29 @@ export default function Home() {
                   </h5>
                   <div className="relative space-y-6">
                     {/* Ligne de progression à gauche - partie complétée en blanc depuis le bas */}
-                    <div className="absolute left-[7px] bottom-0 w-[2px] bg-[#191919] dark:bg-white" style={{height: 'calc(100% - 2rem)'}}></div>
+                    <div
+                      className="absolute left-[7px] bottom-0 w-[2px] bg-[#191919] dark:bg-white"
+                      style={{ height: "calc(100% - 2rem)" }}
+                    ></div>
                     {/* Ligne de progression à faire en gris en haut */}
                     <div className="absolute left-[7px] top-0 w-[2px] bg-gray-300 dark:bg-gray-700 h-8"></div>
-                    
+
                     {/* BUT MMI */}
                     <div className="relative pl-8">
                       {/* Point blanc avec anneau (en cours) */}
                       <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-gray-300 dark:bg-gray-700 border-[3px] border-[#191919] dark:border-white"></div>
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex-1 min-w-0">
-                          <h6 className="text-lg font-bold text-[#191919] dark:text-white uppercase">IUT D&apos;Angoulême</h6>
-                          <p className="text-base font-medium text-gray-700 dark:text-gray-300">BUT Métiers du Multimédia et de l&apos;Internet</p>
+                          <h6 className="text-lg font-bold text-[#191919] dark:text-white uppercase">
+                            IUT D&apos;Angoulême
+                          </h6>
+                          <p className="text-base font-medium text-gray-700 dark:text-gray-300">
+                            BUT Métiers du Multimédia et de l&apos;Internet
+                          </p>
                         </div>
-                        <span className="text-sm italic text-gray-600 dark:text-gray-400 whitespace-nowrap flex-shrink-0">2024 - 2027</span>
+                        <span className="text-sm italic text-gray-600 dark:text-gray-400 whitespace-nowrap flex-shrink-0">
+                          2024 - 2027
+                        </span>
                       </div>
                     </div>
 
@@ -347,10 +437,16 @@ export default function Home() {
                       <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-[#191919] dark:bg-white"></div>
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex-1 min-w-0">
-                          <h6 className="text-lg font-bold text-[#191919] dark:text-white uppercase">Epitech Technology - Bordeaux</h6>
-                          <p className="text-base font-medium text-gray-700 dark:text-gray-300">Ingénierie logicielle</p>
+                          <h6 className="text-lg font-bold text-[#191919] dark:text-white uppercase">
+                            Epitech Technology - Bordeaux
+                          </h6>
+                          <p className="text-base font-medium text-gray-700 dark:text-gray-300">
+                            Ingénierie logicielle
+                          </p>
                         </div>
-                        <span className="text-sm italic text-gray-600 dark:text-gray-400 whitespace-nowrap flex-shrink-0">2023 - 2024</span>
+                        <span className="text-sm italic text-gray-600 dark:text-gray-400 whitespace-nowrap flex-shrink-0">
+                          2023 - 2024
+                        </span>
                       </div>
                     </div>
 
@@ -360,10 +456,16 @@ export default function Home() {
                       <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-[#191919] dark:bg-white"></div>
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex-1 min-w-0">
-                          <h6 className="text-lg font-bold text-[#191919] dark:text-white uppercase">Lycée Les Iris - Lormont</h6>
-                          <p className="text-base font-medium text-gray-700 dark:text-gray-300">Baccalauréat général obtenu</p>
+                          <h6 className="text-lg font-bold text-[#191919] dark:text-white uppercase">
+                            Lycée Les Iris - Lormont
+                          </h6>
+                          <p className="text-base font-medium text-gray-700 dark:text-gray-300">
+                            Baccalauréat général obtenu
+                          </p>
                         </div>
-                        <span className="text-sm italic text-gray-600 dark:text-gray-400 whitespace-nowrap flex-shrink-0">Juillet 2023</span>
+                        <span className="text-sm italic text-gray-600 dark:text-gray-400 whitespace-nowrap flex-shrink-0">
+                          Juillet 2023
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -378,7 +480,22 @@ export default function Home() {
                     className="inline-flex items-center gap-2 px-6 py-3 bg-[#191919] dark:bg-white text-white dark:text-[#191919] rounded-lg text-base font-semibold hover:opacity-80 transition-opacity duration-300"
                   >
                     Télécharger mon CV
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-download-icon lucide-download"
+                    >
+                      <path d="M12 15V3" />
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <path d="m7 10 5 5 5-5" />
+                    </svg>
                   </a>
                 </div>
               </div>
@@ -387,7 +504,10 @@ export default function Home() {
         </section>
 
         {/* Section Projets */}
-        <section id="projets" className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]">
+        <section
+          id="projets"
+          className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]"
+        >
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
             {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
@@ -401,7 +521,11 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <ProjectCard
-                images={["/mmi-planning-1.png", "/mmi-planning-2.png", "/mmi-planning-3.png"]}
+                images={[
+                  "/mmi-planning-1.png",
+                  "/mmi-planning-2.png",
+                  "/mmi-planning-3.png",
+                ]}
                 title="MMI Planning"
                 description="Application web pour consulter son emploi du temps et ceux des autres groupes d'élèves, actualisé en temps réel avec possibilité de partager les cours entre utilisateurs."
                 date="08/09/2025"
@@ -409,7 +533,11 @@ export default function Home() {
                 siteUrl="https://mmi-planning.vgil.fr/"
               />
               <ProjectCard
-                images={["/cineroule-1.png", "/cineroule-2.png", "/cineroule-3.png"]}
+                images={[
+                  "/cineroule-1.png",
+                  "/cineroule-2.png",
+                  "/cineroule-3.png",
+                ]}
                 title="Cineroule"
                 description="Site web interactif permettant aux utilisateurs de voter pour leurs designs d'affiches de films préférés. Interface intuitive avec système de vote en temps réel et options d'accessibilité."
                 date="14/06/2025"
@@ -421,7 +549,10 @@ export default function Home() {
         </section>
 
         {/* Section Contact */}
-        <section id="contact" className="pt-32 pb-24 bg-gray-50 dark:bg-[#121212]">
+        <section
+          id="contact"
+          className="pt-32 pb-24 bg-gray-50 dark:bg-[#121212]"
+        >
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
             {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
@@ -439,14 +570,16 @@ export default function Home() {
                 <div className="mb-8">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
-                      <img 
-                        src="/valentin-gil.jpg" 
-                        alt="Valentin Gil" 
+                      <img
+                        src="/valentin-gil.jpg"
+                        alt="Valentin Gil"
                         className="w-full h-full object-cover object-top"
                       />
                     </div>
                     <div>
-                      <h3 className="text-[2rem] font-bold text-[#191919] dark:text-white mb-1 translate-y-[-5px]">Valentin Gil</h3>
+                      <h3 className="text-[2rem] font-bold text-[#191919] dark:text-white mb-1 translate-y-[-5px]">
+                        Valentin Gil
+                      </h3>
                       <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-100 dark:bg-green-900/30 border border-green-600 dark:border-green-500 rounded-full text-sm font-medium text-green-700 dark:text-green-400 leading-none translate-y-[-5px]">
                         <span className="relative inline-flex">
                           <span className="w-2 h-2 bg-green-600 dark:bg-green-500 rounded-full"></span>
@@ -459,7 +592,9 @@ export default function Home() {
                 </div>
 
                 <div className="mb-3">
-                  <h4 className="text-lg font-semibold text-[#191919] dark:text-white mb-4">Liens utiles :</h4>
+                  <h4 className="text-lg font-semibold text-[#191919] dark:text-white mb-4">
+                    Liens utiles :
+                  </h4>
                   <div className="flex flex-wrap gap-2">
                     <a
                       href="https://linkedin.com/in/valentin-gil"
@@ -467,7 +602,11 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2 bg-[#0A66C2] text-white rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
                     >
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <svg
+                        className="w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                       </svg>
                       <span className="translate-y-[-1px]">LinkedIn</span>
@@ -478,8 +617,16 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2 bg-[#191919] dark:bg-white text-white dark:text-[#191919] rounded-full text-sm font-medium hover:opacity-80 transition-opacity"
                     >
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+                      <svg
+                        className="w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                          clipRule="evenodd"
+                        />
                       </svg>
                       <span className="translate-y-[-1px]">GitHub</span>
                     </a>
@@ -490,7 +637,11 @@ export default function Home() {
                   href="mailto:contact@vgil.fr"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-[#222222] text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-[#2a2a2a] transition-colors"
                 >
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 512 512">
+                  <svg
+                    className="w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 512 512"
+                  >
                     <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
                   </svg>
                   <span className="translate-y-[-1px]">contact@vgil.fr</span>
@@ -499,7 +650,9 @@ export default function Home() {
 
               {/* Colonne droite - Formulaire */}
               <div className="lg:col-span-2">
-                <h3 className="text-[2rem] font-semibold text-[#191919] dark:text-white mb-4">Me contacter</h3>
+                <h3 className="text-[2rem] font-semibold text-[#191919] dark:text-white mb-4">
+                  Me contacter
+                </h3>
                 <form onSubmit={handleSubmit} className="space-y-2">
                   <div className="grid grid-cols-2 gap-2">
                     <input
@@ -539,12 +692,16 @@ export default function Home() {
                     required
                     className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-[#1a1a1a] text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#191919] dark:focus:ring-white transition-shadow resize-none"
                   ></textarea>
-                  
-                  {submitStatus === 'success' && (
-                    <p className="text-green-600 dark:text-green-400 text-sm">Message envoyé avec succès !</p>
+
+                  {submitStatus === "success" && (
+                    <p className="text-green-600 dark:text-green-400 text-sm">
+                      Message envoyé avec succès !
+                    </p>
                   )}
-                  {submitStatus === 'error' && (
-                    <p className="text-red-600 dark:text-red-400 text-sm">Erreur lors de l&apos;envoi. Veuillez réessayer.</p>
+                  {submitStatus === "error" && (
+                    <p className="text-red-600 dark:text-red-400 text-sm">
+                      Erreur lors de l&apos;envoi. Veuillez réessayer.
+                    </p>
                   )}
 
                   <button
@@ -552,9 +709,21 @@ export default function Home() {
                     disabled={isSubmitting}
                     className="inline-flex items-center gap-2 px-6 py-3 bg-[#191919] dark:bg-white text-white dark:text-[#191919] rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                   >
-                    <span className="translate-y-[-1px]">{isSubmitting ? 'Envoi en cours...' : 'Envoyer'}</span>
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    <span className="translate-y-[-1px]">
+                      {isSubmitting ? "Envoi en cours..." : "Envoyer"}
+                    </span>
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
                     </svg>
                   </button>
                 </form>

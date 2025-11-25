@@ -95,13 +95,13 @@ export default function MentionsLegales() {
               maximale de 3 ans, sauf obligation légale contraire, et ne sont
               jamais revendues à des tiers. Le site utilise Vercel Analytics, un
               service fourni par Vercel Inc., afin de mesurer la fréquentation
-              et l&apos;utilisation du site. Les données collectées sont anonymisées
-              et ne permettent pas d&apos;identifier directement l&apos;utilisateur.
-              Conformément au Règlement Général sur la Protection des Données
-              (RGPD), vous disposez d&apos;un droit d&apos;accès, de
-              rectification, d&apos;opposition et de suppression de vos données
-              personnelles. Pour exercer ce droit, vous pouvez envoyer une
-              demande à l&apos;adresse suivante :{" "}
+              et l&apos;utilisation du site. Les données collectées sont
+              anonymisées et ne permettent pas d&apos;identifier directement
+              l&apos;utilisateur. Conformément au Règlement Général sur la
+              Protection des Données (RGPD), vous disposez d&apos;un droit
+              d&apos;accès, de rectification, d&apos;opposition et de
+              suppression de vos données personnelles. Pour exercer ce droit,
+              vous pouvez envoyer une demande à l&apos;adresse suivante :{" "}
               <a
                 href="mailto:contact@vgil.fr"
                 className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white underline underline-offset-2 transition-colors"

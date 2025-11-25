@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useTheme } from "next-themes"
-import styled from "styled-components"
+import * as React from "react";
+import { useTheme } from "next-themes";
+import styled from "styled-components";
 
 const StyledWrapper = styled.div`
   .themeToggle {
@@ -88,44 +88,49 @@ const StyledWrapper = styled.div`
       transform: scale(1);
     }
   }
-`
+`;
 
 export function ModeToggle() {
-  const { setTheme, resolvedTheme } = useTheme()
-  const [mounted, setMounted] = React.useState(false)
-  const uniqueId = React.useId()
+  const { setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+  const uniqueId = React.useId();
 
   React.useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   const toggleTheme = () => {
     // Vérifier si l'API View Transition est supportée
-    const doc = document as Document & { startViewTransition?: (callback: () => void) => void }
+    const doc = document as Document & {
+      startViewTransition?: (callback: () => void) => void;
+    };
     if (doc.startViewTransition) {
       doc.startViewTransition(() => {
-        setTheme(resolvedTheme === "dark" ? "light" : "dark")
-      })
+        setTheme(resolvedTheme === "dark" ? "light" : "dark");
+      });
     } else {
       // Fallback pour les navigateurs non supportés
-      document.body.setAttribute('transition-style', 'in:custom:circle-swoop')
-      
+      document.body.setAttribute("transition-style", "in:custom:circle-swoop");
+
       setTimeout(() => {
-        setTheme(resolvedTheme === "dark" ? "light" : "dark")
-      }, 50)
-      
+        setTheme(resolvedTheme === "dark" ? "light" : "dark");
+      }, 50);
+
       setTimeout(() => {
-        document.body.removeAttribute('transition-style')
-      }, 500)
+        document.body.removeAttribute("transition-style");
+      }, 500);
     }
-  }
+  };
 
   if (!mounted) {
     return (
       <StyledWrapper>
-        <label htmlFor={`themeToggle-${uniqueId}`} className="themeToggle st-sunMoonThemeToggleBtn">
-          <input 
-            type="checkbox" 
+        <label
+          htmlFor={`themeToggle-${uniqueId}`}
+          className="themeToggle st-sunMoonThemeToggleBtn"
+        >
+          <input
+            type="checkbox"
             id={`themeToggle-${uniqueId}`}
             className="themeToggleInput"
             checked={false}
@@ -133,12 +138,24 @@ export function ModeToggle() {
             readOnly
             aria-label="Basculer entre le thème clair et sombre"
           />
-          <svg width={28} height={28} viewBox="0 0 20 20" fill="currentColor" stroke="none">
+          <svg
+            width={28}
+            height={28}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            stroke="none"
+          >
             <mask id={`moon-mask-${uniqueId}`}>
               <rect x={0} y={0} width={20} height={20} fill="white" />
               <circle cx={11} cy={3} r={8} fill="black" />
             </mask>
-            <circle className="sunMoon" cx={10} cy={10} r={8} mask={`url(#moon-mask-${uniqueId})`} />
+            <circle
+              className="sunMoon"
+              cx={10}
+              cy={10}
+              r={8}
+              mask={`url(#moon-mask-${uniqueId})`}
+            />
             <g>
               <circle className="sunRay sunRay1" cx={18} cy={10} r="1.5" />
               <circle className="sunRay sunRay2" cx={14} cy="16.928" r="1.5" />
@@ -150,28 +167,43 @@ export function ModeToggle() {
           </svg>
         </label>
       </StyledWrapper>
-    )
+    );
   }
 
-  const isDark = resolvedTheme === "dark"
+  const isDark = resolvedTheme === "dark";
 
   return (
     <StyledWrapper>
-      <label htmlFor={`themeToggle-${uniqueId}`} className="themeToggle st-sunMoonThemeToggleBtn">
-        <input 
-          type="checkbox" 
+      <label
+        htmlFor={`themeToggle-${uniqueId}`}
+        className="themeToggle st-sunMoonThemeToggleBtn"
+      >
+        <input
+          type="checkbox"
           id={`themeToggle-${uniqueId}`}
-          className="themeToggleInput" 
+          className="themeToggleInput"
           checked={isDark || false}
           onChange={toggleTheme}
           aria-label="Basculer entre le thème clair et sombre"
         />
-        <svg width={28} height={28} viewBox="0 0 20 20" fill="currentColor" stroke="none">
+        <svg
+          width={28}
+          height={28}
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          stroke="none"
+        >
           <mask id={`moon-mask-${uniqueId}`}>
             <rect x={0} y={0} width={20} height={20} fill="white" />
             <circle cx={11} cy={3} r={8} fill="black" />
           </mask>
-          <circle className="sunMoon" cx={10} cy={10} r={8} mask={`url(#moon-mask-${uniqueId})`} />
+          <circle
+            className="sunMoon"
+            cx={10}
+            cy={10}
+            r={8}
+            mask={`url(#moon-mask-${uniqueId})`}
+          />
           <g>
             <circle className="sunRay sunRay1" cx={18} cy={10} r="1.5" />
             <circle className="sunRay sunRay2" cx={14} cy="16.928" r="1.5" />
@@ -183,5 +215,5 @@ export function ModeToggle() {
         </svg>
       </label>
     </StyledWrapper>
-  )
+  );
 }
