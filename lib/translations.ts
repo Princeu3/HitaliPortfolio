@@ -75,7 +75,7 @@ export const translations = {
         usefulLinks: "Liens utiles :",
       },
       form: {
-        title: "Contactez-moi",
+        title: "Envoyez-moi un message",
         lastName: "Nom",
         firstName: "Prénom",
         email: "Email",
@@ -172,7 +172,7 @@ export const translations = {
         usefulLinks: "Useful links:",
       },
       form: {
-        title: "Contact me",
+        title: "Send me a message",
         lastName: "Last Name",
         firstName: "First Name",
         email: "Email",
