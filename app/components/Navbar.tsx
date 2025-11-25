@@ -9,6 +9,7 @@ import { ModeToggle } from "./ModeToggle";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const [isBurgerAnimated, setIsBurgerAnimated] = useState(false);
   const pathname = usePathname();
   
   const isLegalPage = pathname !== "/";
@@ -31,17 +32,21 @@ export default function Navbar() {
   const handleMenuToggle = () => {
     if (isMenuOpen) {
       setIsClosing(true);
+      setIsBurgerAnimated(false);
       setTimeout(() => {
         setIsMenuOpen(false);
         setIsClosing(false);
       }, 300);
     } else {
       setIsMenuOpen(true);
+      setIsBurgerAnimated(true);
+      setIsClosing(false);
     }
   };
 
   const handleLinkClick = () => {
     setIsClosing(true);
+    setIsBurgerAnimated(false);
     setTimeout(() => {
       setIsMenuOpen(false);
       setIsClosing(false);
@@ -135,20 +140,20 @@ export default function Navbar() {
             <ModeToggle />
             <button
               onClick={handleMenuToggle}
-              className="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:bg-white/20 dark:hover:bg-white/10 hover:text-gray-900 dark:hover:text-white focus:outline-none transition-all relative w-9 h-9 flex items-center justify-center"
-              aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
-              aria-expanded={isMenuOpen}
+              className="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white focus:outline-none transition-all relative w-9 h-9 flex items-center justify-center"
+              aria-label={isMenuOpen || isClosing ? "Fermer le menu" : "Ouvrir le menu"}
+              aria-expanded={isMenuOpen || isClosing}
             >
-              <span className="sr-only">{isMenuOpen ? "Fermer" : "Ouvrir"} le menu</span>
-              <div className="w-6 h-5 relative flex flex-col justify-between">
+              <span className="sr-only">{isMenuOpen || isClosing ? "Fermer" : "Ouvrir"} le menu</span>
+              <div className="flex flex-col justify-between w-6 h-5">
                 <span className={`block h-[2px] w-full bg-current transform transition-all duration-300 ease-in-out ${
-                  isMenuOpen ? 'rotate-45 translate-y-[9px]' : 'rotate-0 translate-y-0'
+                  isBurgerAnimated ? 'rotate-45 translate-y-[9px]' : 'rotate-0 translate-y-0'
                 }`} />
                 <span className={`block h-[2px] w-full bg-current transition-all duration-300 ease-in-out ${
-                  isMenuOpen ? 'opacity-0' : 'opacity-100'
+                  isBurgerAnimated ? 'opacity-0 translate-x-6' : 'opacity-100 translate-x-0'
                 }`} />
                 <span className={`block h-[2px] w-full bg-current transform transition-all duration-300 ease-in-out ${
-                  isMenuOpen ? '-rotate-45 -translate-y-[9px]' : 'rotate-0 translate-y-0'
+                  isBurgerAnimated ? '-rotate-45 -translate-y-[9px]' : 'rotate-0 translate-y-0'
                 }`} />
               </div>
             </button>
@@ -160,7 +165,7 @@ export default function Navbar() {
     {/* Menu Mobile Plein Écran */}
     {isMenuOpen && (
       <div 
-        className={`lg:hidden fixed inset-0 z-40 bg-white dark:bg-black ${
+        className={`lg:hidden fixed inset-0 z-40 bg-white dark:bg-[#101010] ${
           isClosing ? 'animate-fade-out' : 'animate-fade-in'
         }`}
         role="menu" 
@@ -171,15 +176,44 @@ export default function Navbar() {
         }`}>
           <ul className="space-y-8 text-center">
             {isLegalPage ? (
-              <li role="none" className="animate-fade-in-delay-1">
-                <Link
-                  href="/"
-                  onClick={handleLinkClick}
-                  className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block" 
-                >
-                  Retour à l&apos;accueil
-                </Link>
-              </li>
+<>
+                <li role="none" className="animate-fade-in-delay-1">
+                  <Link
+                    href="/"
+                    className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block" 
+                    role="menuitem"
+                  >
+                    Accueil
+                  </Link>
+                </li>
+                <li role="none" className="animate-fade-in-delay-2">
+                  <Link
+                    href="/#about" 
+                    className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block" 
+                    role="menuitem"
+                  >
+                    À propos
+                  </Link>
+                </li>
+                <li role="none" className="animate-fade-in-delay-3">
+                  <Link
+                    href="/#projets" 
+                    className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block" 
+                    role="menuitem"
+                  >
+                    Projets
+                  </Link>
+                </li>
+                <li role="none" className="animate-fade-in-delay-4">
+                  <Link
+                    href="/#contact" 
+                    className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block" 
+                    role="menuitem"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </>
             ) : (
               <>
                 <li role="none" className="animate-fade-in-delay-1">
