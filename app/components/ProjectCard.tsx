@@ -5,6 +5,7 @@ interface ProjectCardProps {
   date: string;
   tags: string[];
   isVideo?: boolean;
+  siteUrl?: string;
 }
 
 export default function ProjectCard({
@@ -14,6 +15,7 @@ export default function ProjectCard({
   date,
   tags,
   isVideo = false,
+  siteUrl,
 }: ProjectCardProps) {
   const renderMedia = () => {
     if (isVideo && images.length === 1) {
@@ -90,8 +92,24 @@ export default function ProjectCard({
   };
 
   return (
-    <div className="bg-white dark:bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
-      {renderMedia()}
+    <a
+      href={siteUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block bg-white dark:bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:bg-gray-50 dark:hover:bg-[#222222] transition-all duration-300 group cursor-pointer"
+    >
+      <div className="relative">
+        {renderMedia()}
+        {/* Overlay "Accéder au site" */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60 backdrop-blur-sm">
+          <div className="text-white text-center">
+            <span className="text-xl font-bold flex items-center gap-2">
+              Accéder au site
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-external-link-icon lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            </span>
+          </div>
+        </div>
+      </div>
       <div className="p-6">
         <h3 className="text-2xl font-bold text-[#191919] dark:text-white mb-2 translate-y-[-1px]">{title}</h3>
         <p className="text-gray-700 dark:text-gray-300 mb-4 text-sm leading-relaxed">
@@ -103,7 +121,7 @@ export default function ProjectCard({
             {tags.map((tag, index) => (
               <span 
                 key={index}
-                className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium"
+                className="px-3 py-1 bg-gray-100 dark:bg-gray-750 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               >
                 {tag}
               </span>
@@ -111,6 +129,6 @@ export default function ProjectCard({
           </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 }

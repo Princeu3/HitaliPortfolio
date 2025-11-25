@@ -401,18 +401,20 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <ProjectCard
-                images={["/cineroule-1.png", "/cineroule-2.png", "/cineroule-3.png"]}
-                title="Cineroule"
-                description="Site web interactif permettant aux utilisateurs de voter pour leurs designs d'affiches de films préférés. Interface intuitive avec système de vote en temps réel et options d'accessibilité."
-                date="14/06/2025"
-                tags={["PHP", "CSS", "JS"]}
-              />
-              <ProjectCard
                 images={["/mmi-planning-1.png", "/mmi-planning-2.png", "/mmi-planning-3.png"]}
                 title="MMI Planning"
                 description="Application web pour consulter son emploi du temps et ceux des autres groupes d'élèves, actualisé en temps réel avec possibilité de partager les cours entre utilisateurs."
                 date="08/09/2025"
                 tags={["React", "TypeScript", "Vite"]}
+                siteUrl="https://mmi-planning.vgil.fr/"
+              />
+              <ProjectCard
+                images={["/cineroule-1.png", "/cineroule-2.png", "/cineroule-3.png"]}
+                title="Cineroule"
+                description="Site web interactif permettant aux utilisateurs de voter pour leurs designs d'affiches de films préférés. Interface intuitive avec système de vote en temps réel et options d'accessibilité."
+                date="14/06/2025"
+                tags={["PHP", "CSS", "JS"]}
+                siteUrl="https://vgil.alwaysdata.net/s2-cine-itinerant"
               />
             </div>
           </div>
