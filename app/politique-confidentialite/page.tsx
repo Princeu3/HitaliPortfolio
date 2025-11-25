@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Politique de Confidentialité",
@@ -196,6 +197,7 @@ export default function Confidentialite() {
           </section>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

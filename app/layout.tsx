@@ -20,20 +20,6 @@ const geistMono = Geist_Mono({
   preload: false, // Chargement différé pour la police mono
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-});
-
-const dancingScript = Dancing_Script({
-  variable: "--font-dancing-script",
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL('https://vgil.fr'),
   title: "Valentin Gil - Portfolio",
@@ -90,7 +76,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteStructuredData) }}
         />
       </head>
-      <body className={`${geist.variable} ${geistMono.variable} ${playfair.variable} ${dancingScript.variable} antialiased`}>
+      <body className={`${geist.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

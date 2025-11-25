@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Mentions Légales",
@@ -134,6 +135,7 @@ export default function MentionsLegales() {
           </section>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

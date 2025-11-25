@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/theme-provider";
 import LazyBeams from "./components/LazyBeams";
 
-export default function Home() {
+export default function NotFound() {
   return (
     <main>
       <ThemeProvider>
@@ -33,7 +33,7 @@ export default function Home() {
 
           <Navbar />
 
-          {/* Icônes sociales en bas à gauche - uniquement sur landing page */}
+          {/* Icônes sociales en bas à gauche */}
           <div className="absolute bottom-8 left-8 flex flex-col gap-3">
             <a
               href="https://linkedin.com/in/valentin-gil"
@@ -102,9 +102,9 @@ export default function Home() {
           >
             <div className="relative mb-8">
               {/* SVG pour mobile */}
-              <svg className="absolute top-3 left-1/2 -translate-x-1/2 -z-10 h-[6rem] md:hidden" viewBox="0 0 600 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg className="absolute top-10 left-1/2 -translate-x-1/2 -z-10 h-[9rem] md:hidden" viewBox="0 0 400 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <defs>
-                  <linearGradient id="strokeGradientMobile" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <linearGradient id="strokeGradient404Mobile" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop offset="60%" stopColor="currentColor" stopOpacity="0" />
                     <stop offset="100%" stopColor="currentColor" stopOpacity="1" />
                   </linearGradient>
@@ -115,129 +115,61 @@ export default function Home() {
                   dominantBaseline="middle" 
                   textAnchor="middle" 
                   className="font-bold fill-transparent"
-                  stroke="url(#strokeGradientMobile)" 
-                  strokeWidth="2"
-                  style={{ fontSize: '94px', fontFamily: 'inherit' }}
-                >
-                  Valentin Gil
-                </text>
-              </svg>
-              {/* SVG pour tablette */}
-              <svg className="absolute top-7 left-1/2 -translate-x-1/2 -z-10 h-[8rem] hidden md:block lg:hidden" viewBox="0 0 800 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <defs>
-                  <linearGradient id="strokeGradientTablet" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="60%" stopColor="currentColor" stopOpacity="0" />
-                    <stop offset="100%" stopColor="currentColor" stopOpacity="1" />
-                  </linearGradient>
-                </defs>
-                <text 
-                  x="50%" 
-                  y="50%" 
-                  dominantBaseline="middle" 
-                  textAnchor="middle" 
-                  className="font-bold fill-transparent"
-                  stroke="url(#strokeGradientTablet)" 
-                  strokeWidth="2"
-                  style={{ fontSize: '112px', fontFamily: 'inherit' }}
-                >
-                  Valentin Gil
-                </text>
-              </svg>
-              {/* SVG pour desktop */}
-              <svg className="absolute top-12 left-1/2 -translate-x-1/2 -z-10 h-[9rem] hidden lg:block" viewBox="0 0 800 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <defs>
-                  <linearGradient id="strokeGradientDesktop" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="60%" stopColor="currentColor" stopOpacity="0" />
-                    <stop offset="100%" stopColor="currentColor" stopOpacity="1" />
-                  </linearGradient>
-                </defs>
-                <text 
-                  x="50%" 
-                  y="50%" 
-                  dominantBaseline="middle" 
-                  textAnchor="middle" 
-                  className="font-bold fill-transparent"
-                  stroke="url(#strokeGradientDesktop)" 
+                  stroke="url(#strokeGradient404Mobile)" 
                   strokeWidth="2"
                   style={{ fontSize: '133px', fontFamily: 'inherit' }}
                 >
-                  Valentin Gil
+                  404
                 </text>
               </svg>
-              <h1 
-                className="text-6xl md:text-8xl lg:text-9xl font-bold text-center relative z-10 whitespace-nowrap"
-              >
-                Valentin Gil
+              {/* SVG pour tablette */}
+              <svg className="absolute top-18 left-1/2 -translate-x-1/2 -z-10 h-[12rem] hidden md:block lg:hidden" viewBox="0 0 500 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="strokeGradient404Tablet" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="60%" stopColor="currentColor" stopOpacity="0" />
+                    <stop offset="100%" stopColor="currentColor" stopOpacity="1" />
+                  </linearGradient>
+                </defs>
+                <text 
+                  x="50%" 
+                  y="50%" 
+                  dominantBaseline="middle" 
+                  textAnchor="middle" 
+                  className="font-bold fill-transparent"
+                  stroke="url(#strokeGradient404Tablet)" 
+                  strokeWidth="2"
+                  style={{ fontSize: '149px', fontFamily: 'inherit' }}
+                >
+                  404
+                </text>
+              </svg>
+              {/* SVG pour desktop */}
+              <svg className="absolute top-24 left-1/2 -translate-x-1/2 -z-10 h-[16rem] hidden lg:block" viewBox="0 0 600 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="strokeGradient404Desktop" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="60%" stopColor="currentColor" stopOpacity="0" />
+                    <stop offset="100%" stopColor="currentColor" stopOpacity="1" />
+                  </linearGradient>
+                </defs>
+                <text 
+                  x="50%" 
+                  y="50%" 
+                  dominantBaseline="middle" 
+                  textAnchor="middle" 
+                  className="font-bold fill-transparent"
+                  stroke="url(#strokeGradient404Desktop)" 
+                  strokeWidth="2"
+                  style={{ fontSize: '149px', fontFamily: 'inherit' }}
+                >
+                  404
+                </text>
+              </svg>
+              <h1 className="text-9xl md:text-[12rem] lg:text-[16rem] font-bold text-center text-gray-900 dark:text-white relative z-10">
+                404
               </h1>
             </div>
           </div>
         </div>
-
-        {/* Section À propos */}
-        <section id="about" className="py-32 bg-gray-50 dark:bg-[#18181b]">
-          <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
-              À propos
-            </h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-2">
-              Je m&apos;appelle Valentin Gil, étudiant en BUT Métiers du
-              Multimédia et de l&apos;Internet à l&apos;IUT d&apos;Angoulême.
-              Passionné par le web, j&apos;aime concevoir des interfaces
-              modernes, accessibles et performantes.
-            </p>
-            <p className="text-lg text-gray-700 dark:text-gray-300">
-              J&apos;utilise principalement Next.js, React, Tailwind CSS et je
-              m&apos;intéresse à l&apos;UX/UI, l&apos;accessibilité et
-              l&apos;optimisation des performances.
-            </p>
-          </div>
-        </section>
-
-        {/* Section Projets */}
-        <section id="projets" className="py-32 bg-gray-50 dark:bg-[#18181b]">
-          <div className="max-w-5xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
-              Projets
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white dark:bg-[#23272f] rounded-xl shadow p-6">
-                <h3 className="text-xl font-semibold mb-2">Portfolio</h3>
-                <p className="text-gray-700 dark:text-gray-300">
-                  Ce site, développé avec Next.js 15, Tailwind CSS 4 et
-                  animations Three.js. Optimisé pour la performance,
-                  l&apos;accessibilité et le SEO.
-                </p>
-              </div>
-              <div className="bg-white dark:bg-[#23272f] rounded-xl shadow p-6">
-                <h3 className="text-xl font-semibold mb-2">Projet fictif</h3>
-                <p className="text-gray-700 dark:text-gray-300">
-                  Un projet de site vitrine pour une startup, avec design
-                  sur-mesure, dark mode, et animations interactives.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section Contact */}
-        <section id="contact" className="py-32">
-          <div className="max-w-xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
-              Contact
-            </h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-              Envie de collaborer, de me proposer un stage ou simplement
-              d&apos;échanger ?
-            </p>
-            <a
-              href="mailto:contact@vgil.fr"
-              className="inline-block px-8 py-4 rounded-full bg-primary text-white font-semibold shadow hover:bg-primary/90 transition"
-            >
-              Me contacter
-            </a>
-          </div>
-        </section>
-
         <Footer />
       </ThemeProvider>
     </main>

@@ -131,6 +131,7 @@ export function ModeToggle() {
             checked={false}
             disabled
             readOnly
+            aria-label="Basculer entre le thème clair et sombre"
           />
           <svg width={28} height={28} viewBox="0 0 20 20" fill="currentColor" stroke="none">
             <mask id={`moon-mask-${uniqueId}`}>
@@ -163,6 +164,7 @@ export function ModeToggle() {
           className="themeToggleInput" 
           checked={isDark || false}
           onChange={toggleTheme}
+          aria-label="Basculer entre le thème clair et sombre"
         />
         <svg width={28} height={28} viewBox="0 0 20 20" fill="currentColor" stroke="none">
           <mask id={`moon-mask-${uniqueId}`}>

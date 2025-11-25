@@ -11,10 +11,8 @@ export default function Navbar() {
   const [isClosing, setIsClosing] = useState(false);
   const pathname = usePathname();
   
-  // Détecter si on est sur une page légale
-  const isLegalPage = pathname === "/mentions-legales" || pathname === "/politique-confidentialite";
+  const isLegalPage = pathname !== "/";
 
-  // Gérer le scroll du body
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -36,7 +34,7 @@ export default function Navbar() {
       setTimeout(() => {
         setIsMenuOpen(false);
         setIsClosing(false);
-      }, 300); // Durée de l'animation de fermeture
+      }, 300);
     } else {
       setIsMenuOpen(true);
     }
