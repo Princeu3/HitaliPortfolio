@@ -253,7 +253,7 @@ export default function Home() {
         </div>
 
         {/* Section À propos */}
-        <section id="a-propos" className="py-32 bg-white dark:bg-[#121212]">
+        <section id="a-propos" className="pt-32 pb-8 bg-white dark:bg-[#121212]">
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
             {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
@@ -387,7 +387,7 @@ export default function Home() {
         </section>
 
         {/* Section Projets */}
-        <section id="projets" className="pb-32 pt-8 bg-white dark:bg-[#121212]">
+        <section id="projets" className="pt-32 pb-8 bg-white dark:bg-[#121212]">
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
             {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
@@ -412,7 +412,7 @@ export default function Home() {
         </section>
 
         {/* Section Contact */}
-        <section id="contact" className="pb-32 pt-8 bg-white dark:bg-[#121212]">
+        <section id="contact" className="pt-32 pb-24 bg-white dark:bg-[#121212]">
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
             {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
