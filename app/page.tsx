@@ -479,22 +479,22 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-[#191919] dark:bg-white text-white dark:text-[#191919] rounded-lg text-base font-semibold hover:opacity-80 transition-opacity duration-300"
                   >
-                    Télécharger mon CV
+                    Voir mon CV
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
+                      width="24"
+                      height="24"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="lucide lucide-download-icon lucide-download"
+                      className="lucide lucide-external-link-icon lucide-external-link"
                     >
-                      <path d="M12 15V3" />
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                      <path d="m7 10 5 5 5-5" />
+                      <path d="M15 3h6v6" />
+                      <path d="M10 14 21 3" />
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                     </svg>
                   </a>
                 </div>
