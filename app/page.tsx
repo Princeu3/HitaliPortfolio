@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/theme-provider";
 import LazyBeams from "./components/LazyBeams";
+import ProjectCard from "./components/ProjectCard";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -386,7 +387,7 @@ export default function Home() {
         </section>
 
         {/* Section Projets */}
-        <section id="projets" className="py-32 bg-white dark:bg-[#121212]">
+        <section id="projets" className="pb-32 pt-8 bg-white dark:bg-[#121212]">
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
             {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
@@ -398,28 +399,20 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white dark:bg-[#23272f] rounded-xl shadow p-6">
-                <h3 className="text-xl font-semibold mb-2">Portfolio</h3>
-                <p className="text-gray-700 dark:text-gray-300">
-                  Ce site, développé avec Next.js 15, Tailwind CSS 4 et
-                  animations Three.js. Optimisé pour la performance,
-                  l&apos;accessibilité et le SEO.
-                </p>
-              </div>
-              <div className="bg-white dark:bg-[#23272f] rounded-xl shadow p-6">
-                <h3 className="text-xl font-semibold mb-2">Projet fictif</h3>
-                <p className="text-gray-700 dark:text-gray-300">
-                  Un projet de site vitrine pour une startup, avec design
-                  sur-mesure, dark mode, et animations interactives.
-                </p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <ProjectCard
+                images={["/cineroule-1.png", "/cineroule-2.png", "/cineroule-3.png"]}
+                title="Cineroule"
+                description="Site web interactif permettant aux utilisateurs de voter pour leurs designs d'affiches de films préférés. Interface intuitive avec système de vote en temps réel et options d'accessibilité."
+                date="14/06/2025"
+                tags={["PHP", "CSS", "JS"]}
+              />
             </div>
           </div>
         </section>
 
         {/* Section Contact */}
-        <section id="contact" className="py-32 bg-white dark:bg-[#121212]">
+        <section id="contact" className="pb-32 pt-8 bg-white dark:bg-[#121212]">
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
             {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
