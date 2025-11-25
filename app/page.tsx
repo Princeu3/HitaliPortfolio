@@ -113,12 +113,20 @@ export default function Home() {
                     <stop offset="100%" stopColor="#ffffff" stopOpacity="1" />
                   </linearGradient>
                 </defs>
+                <style>{`
+                  .text-name-mobile { stroke: url(#strokeGradientMobileLight); }
+                  @media (prefers-color-scheme: dark) {
+                    .dark .text-name-mobile { stroke: url(#strokeGradientMobileDark); }
+                  }
+                  .dark .text-name-mobile { stroke: url(#strokeGradientMobileDark); }
+                `}</style>
                 <text 
                   x="50%" 
                   y="50%" 
                   dominantBaseline="middle" 
                   textAnchor="middle" 
-                  className="font-bold fill-transparent [stroke:url(#strokeGradientMobileLight)] dark:[stroke:url(#strokeGradientMobileDark)]"
+                  className="text-name-mobile font-bold"
+                  fill="transparent"
                   strokeWidth="2"
                   style={{ fontSize: '94px', fontFamily: 'inherit' }}
                 >

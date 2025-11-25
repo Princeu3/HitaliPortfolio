@@ -113,12 +113,20 @@ export default function NotFound() {
                     <stop offset="100%" stopColor="#ffffff" stopOpacity="1" />
                   </linearGradient>
                 </defs>
+                <style>{`
+                  .text-404-mobile { stroke: url(#strokeGradient404MobileLight); }
+                  @media (prefers-color-scheme: dark) {
+                    .dark .text-404-mobile { stroke: url(#strokeGradient404MobileDark); }
+                  }
+                  .dark .text-404-mobile { stroke: url(#strokeGradient404MobileDark); }
+                `}</style>
                 <text 
                   x="50%" 
                   y="50%" 
                   dominantBaseline="middle" 
                   textAnchor="middle" 
-                  className="font-bold fill-transparent [stroke:url(#strokeGradient404MobileLight)] dark:[stroke:url(#strokeGradient404MobileDark)]"
+                  className="text-404-mobile font-bold"
+                  fill="transparent"
                   strokeWidth="2"
                   style={{ fontSize: '133px', fontFamily: 'inherit' }}
                 >
