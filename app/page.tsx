@@ -541,7 +541,7 @@ export default function Home() {
                 title="Cineroule"
                 description={t.projects.cineroule.description}
                 date={t.projects.cineroule.date}
-                tags={["PHP", "CSS", "JS"]}
+                tags={["PHP", "CSS", "JavaScript"]}
                 siteUrl="https://vgil.alwaysdata.net/s2-cine-itinerant"
               />
             </div>
@@ -635,7 +635,7 @@ export default function Home() {
 
                 <a
                   href="mailto:contact@vgil.fr"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-[#222222] text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-[#2a2a2a] transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-gray-200 dark:bg-[#222222] text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-[#2a2a2a] transition-colors"
                 >
                   <svg
                     className="w-4 h-4"

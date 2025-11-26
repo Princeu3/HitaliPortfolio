@@ -90,15 +90,13 @@ ${message}
                           <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%); flex-shrink: 0;"></div>
                           
                           <!-- Informations -->
-                          <div style="flex: 1;">
+                          <div style="flex: 1; margin-left: 16px;">
                             <h2 style="margin: 0 0 8px 0; color: #ffffff; font-size: 24px; font-weight: 700; letter-spacing: -0.5px;">
                               ${prenom} ${nom}
                             </h2>
                             <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; background-color: rgba(255, 255, 255, 0.1); border-radius: 20px;">
-                              <svg width="16" height="16" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;">
-                                <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" fill="#d0d0d0"/>
-                              </svg>
-                              <a href="mailto:${email}" style="color: #d0d0d0; font-size: 14px; font-weight: 500; text-decoration: none;">
+                              <img src="https://vgil.fr/envelope.png" alt="Email" style="width: 16px; height: 16px; flex-shrink: 0;" />
+                              <a href="mailto:${email}" style="color: oklch(87.2% 0.01 258.338); font-size: 14px; font-weight: 500; text-decoration: none;">
                                 ${email}
                               </a>
                             </div>
