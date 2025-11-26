@@ -1,47 +1,48 @@
-
 # Valentin Gil – Portfolio
 
-Bienvenue sur le portfolio de Valentin Gil, étudiant en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.
+<img src="public/preview.png" alt="Aperçu du site" width="100%" style="margin-bottom: 1rem;" />
 
-<img src="public/preview.png" alt="Aperçu du site" width="500" style="margin-bottom: 1rem;" />
+## 🚀 À propos
 
-## 🚀 Aperçu
+Étant étudiant en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême, ce portfolio présente mes projets, compétences et expériences dans le domaine du développement web et du design.
 
-Ce site présente mes projets, compétences et expériences dans le domaine du web, du design et du développement front-end.
+## 🛠️ Stack technique
 
-- **Stack** : Next.js 15, React, Tailwind CSS 4, TypeScript
-- **Design** : Responsive, dark/light mode, animations Three.js
-- **SEO** : Métadonnées, sitemap, JSON-LD, accessibilité optimisée
-- **Hébergement** : Vercel
+- **Framework** : Next.js 15 (App Router)
+- **Langage** : TypeScript
+- **Style** : Tailwind CSS 4
+- **Animations** : Three.js (React Three Fiber)
+- **Composants UI** : Radix UI (shadcn/ui)
+- **Formulaire** : Nodemailer pour l'envoi d'emails
+- **i18n** : Détection automatique français/anglais
+- **Déploiement** : Vercel
 
-## ✨ Fonctionnalités principales
+## ✨ Fonctionnalités
 
-- Navigation fluide et animée
-- Section projets avec visuels interactifs
-- Pages légales (mentions légales, politique de confidentialité)
-- Mode sombre/clair automatique
-- Analytics Vercel intégrés
+- **Animations 3D** : Effets de fond avec Three.js
+- **Interface bilingue** : Détection automatique de la langue du navigateur (FR/EN)
+- **Design responsive** : Adapté mobile, tablette et desktop
+- **Mode sombre/clair** : Thème adaptatif avec persistance
+- **Formulaire de contact** : Envoi d'emails avec template personnalisé
+- **SEO optimisé** : Métadonnées, sitemap, robots.txt, JSON-LD
+- **Pages légales** : Mentions légales et politique de confidentialité
+- **Analytics** : Vercel Analytics intégré
 
-## 📦 Installation locale
+## 🌍 Internationalisation
 
-```bash
-pnpm install
-pnpm dev
-```
+Le site détecte automatiquement la langue du navigateur :
+- 🇫🇷 Français si le navigateur est en français
+- 🇬🇧 Anglais dans tous les autres cas
 
-Le site sera accessible sur [http://localhost:3000](http://localhost:3000).
+Les traductions sont gérées via `lib/translations.ts` et le hook `useLanguage()`.
 
-## 🛠️ Scripts utiles
+## 🌐 En ligne
 
-- `pnpm dev` : Démarre le serveur de développement
-- `pnpm build` : Build de production
-- `pnpm lint` : Lint du code avec ESLint
-
-## 🌐 Déploiement
+**URL du site** : [https://vgil.fr](https://vgil.fr)
 
 Le site est déployé automatiquement sur Vercel à chaque push sur la branche `main`.
 
-## 📄 Mentions légales & RGPD
+## 📄 Pages légales
 
 - [Mentions légales](https://vgil.fr/mentions-legales)
 - [Politique de confidentialité](https://vgil.fr/politique-confidentialite)
