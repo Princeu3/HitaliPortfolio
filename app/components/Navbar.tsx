@@ -237,12 +237,17 @@ export default function Navbar() {
                 onClick={handleMenuToggle}
                 className="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white focus:outline-none transition-all relative w-9 h-9 flex items-center justify-center"
                 aria-label={
-                  isMenuOpen || isClosing ? t.nav.burger.closeMenu : t.nav.burger.openMenu
+                  isMenuOpen || isClosing
+                    ? t.nav.burger.closeMenu
+                    : t.nav.burger.openMenu
                 }
                 aria-expanded={isMenuOpen || isClosing}
               >
                 <span className="sr-only">
-                  {isMenuOpen || isClosing ? t.nav.burger.close : t.nav.burger.open} {t.nav.burger.menu}
+                  {isMenuOpen || isClosing
+                    ? t.nav.burger.close
+                    : t.nav.burger.open}{" "}
+                  {t.nav.burger.menu}
                 </span>
                 <div className="flex flex-col justify-between w-6 h-5">
                   <span
@@ -332,7 +337,11 @@ export default function Navbar() {
                   <li role="none" className="animate-fade-in-delay-1">
                     <a
                       href="#"
-                      onClick={handleLinkClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        handleLinkClick();
+                      }}
                       className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block"
                       role="menuitem"
                     >
@@ -342,7 +351,13 @@ export default function Navbar() {
                   <li role="none" className="animate-fade-in-delay-2">
                     <a
                       href={`#${t.sections.about}`}
-                      onClick={handleLinkClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document
+                          .querySelector(`#${t.sections.about}`)
+                          ?.scrollIntoView({ behavior: "smooth" });
+                        handleLinkClick();
+                      }}
                       className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block"
                       role="menuitem"
                     >
@@ -352,7 +367,13 @@ export default function Navbar() {
                   <li role="none" className="animate-fade-in-delay-3">
                     <a
                       href={`#${t.sections.projects}`}
-                      onClick={handleLinkClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document
+                          .querySelector(`#${t.sections.projects}`)
+                          ?.scrollIntoView({ behavior: "smooth" });
+                        handleLinkClick();
+                      }}
                       className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block"
                       role="menuitem"
                     >
@@ -362,7 +383,13 @@ export default function Navbar() {
                   <li role="none" className="animate-fade-in-delay-4">
                     <a
                       href={`#${t.sections.contact}`}
-                      onClick={handleLinkClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document
+                          .querySelector(`#${t.sections.contact}`)
+                          ?.scrollIntoView({ behavior: "smooth" });
+                        handleLinkClick();
+                      }}
                       className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block"
                       role="menuitem"
                     >
