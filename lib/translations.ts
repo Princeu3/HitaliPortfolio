@@ -1,6 +1,3 @@
-import { desc } from "framer-motion/client";
-import { title } from "process";
-
 export const translations = {
   fr: {
     sections: {
