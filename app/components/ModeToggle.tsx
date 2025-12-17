@@ -102,7 +102,6 @@ export function ModeToggle() {
   }, []);
 
   const toggleTheme = () => {
-    // Vérifier si l'API View Transition est supportée
     const doc = document as Document & {
       startViewTransition?: (callback: () => void) => void;
     };
@@ -111,7 +110,6 @@ export function ModeToggle() {
         setTheme(resolvedTheme === "dark" ? "light" : "dark");
       });
     } else {
-      // Fallback pour les navigateurs non supportés
       document.body.setAttribute("transition-style", "in:custom:circle-swoop");
 
       setTimeout(() => {

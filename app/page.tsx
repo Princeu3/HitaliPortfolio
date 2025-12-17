@@ -63,9 +63,7 @@ export default function Home() {
   return (
     <main>
       <ThemeProvider>
-        {/* Section avec Beams en fond - 100vh */}
         <div className="relative h-screen">
-          {/* Beams en arrière-plan - chargé intelligemment */}
           <div className="absolute inset-0 w-full h-full -z-10">
             <Suspense
               fallback={
@@ -86,7 +84,6 @@ export default function Home() {
 
           <Navbar />
 
-          {/* Icônes sociales en bas à gauche - uniquement sur landing page */}
           <div className="absolute bottom-8 left-8 flex flex-col gap-3">
             <a
               href="https://linkedin.com/in/valentin-gil"
@@ -147,14 +144,12 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Contenu de la première section */}
           <div
             className="flex h-full flex-col items-center justify-center p-24"
             role="main"
             aria-label="Contenu principal"
           >
             <div className="relative mb-8">
-              {/* SVG pour mobile */}
               <svg
                 className="absolute top-3 left-1/2 -translate-x-1/2 -z-10 h-[6rem] w-auto max-w-[95vw] md:hidden"
                 viewBox="0 0 600 150"
@@ -204,7 +199,6 @@ export default function Home() {
                   Valentin Gil
                 </text>
               </svg>
-              {/* SVG pour tablette */}
               <svg
                 className="absolute top-7 left-1/2 -translate-x-1/2 -z-10 h-[8rem] hidden md:block lg:hidden"
                 viewBox="0 0 800 150"
@@ -245,7 +239,6 @@ export default function Home() {
                   Valentin Gil
                 </text>
               </svg>
-              {/* SVG pour desktop */}
               <svg
                 className="absolute top-12 left-1/2 -translate-x-1/2 -z-10 h-[9rem] hidden lg:block"
                 viewBox="0 0 800 150"
@@ -291,7 +284,6 @@ export default function Home() {
               </h1>
             </div>
 
-            {/* Flèche de scroll */}
             <a
               href={`#${t.sections.about}`}
               onClick={(e) => {
@@ -321,13 +313,11 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Section À propos */}
         <section
           id={t.sections.about}
           className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]"
         >
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
-            {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
               <div className="flex items-end gap-6 sm:gap-8">
                 <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
@@ -337,9 +327,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Contenu */}
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-              {/* Photo de profil */}
               <div className="flex-shrink-0 w-full lg:w-auto">
                 <div className="relative w-full h-80 sm:w-72 sm:h-[22rem] sm:mx-auto lg:mx-0 rounded-[1.5rem] overflow-hidden group">
                   <Image
@@ -348,7 +336,6 @@ export default function Home() {
                     fill
                     className="object-cover object-top"
                   />
-                  {/* Tag crédit photo */}
                   <div className="absolute bottom-3 left-3 px-3 py-1.5 bg-black/70 dark:bg-white/80 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300">
                     <p className="text-xs text-white dark:text-black font-medium">
                       📸 Arthur Binchet
@@ -357,7 +344,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Contenu */}
               <div className="flex-1">
                 <div className="mb-6">
                   <h3 className="text-3xl sm:text-4xl font-medium text-gray-900 dark:text-white">
@@ -368,7 +354,6 @@ export default function Home() {
                   </h4>
                 </div>
 
-                {/* Tags */}
                 <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
                   <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-[#e5e5e5]/80 dark:bg-[#2a2a2a]/80 rounded-full text-xs sm:text-sm font-medium text-[#191919] dark:text-white transition-colors">
                     <svg
@@ -395,28 +380,22 @@ export default function Home() {
                   </span>
                 </div>
 
-                {/* Description */}
                 <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-3xl leading-relaxed mb-12">
                   {t.about.description}
                 </p>
 
-                {/* Parcours */}
                 <div className="mb-8">
                   <h5 className="text-2xl sm:text-3xl font-bold mb-6 text-[#191919] dark:text-white">
                     {t.about.education.title}
                   </h5>
                   <div className="relative space-y-6">
-                    {/* Ligne de progression à gauche - partie complétée en blanc depuis le bas */}
                     <div
                       className="absolute left-[7px] bottom-0 w-[2px] bg-[#191919] dark:bg-white"
                       style={{ height: "calc(100% - 2rem)" }}
                     ></div>
-                    {/* Ligne de progression à faire en gris en haut */}
                     <div className="absolute left-[7px] top-0 w-[2px] bg-gray-300 dark:bg-gray-700 h-8"></div>
 
-                    {/* BUT MMI */}
                     <div className="relative pl-8">
-                      {/* Point blanc avec anneau (en cours) */}
                       <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-gray-300 dark:bg-gray-700 border-[3px] border-[#191919] dark:border-white"></div>
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex-1 min-w-0">
@@ -433,9 +412,7 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Epitech */}
                     <div className="relative pl-8">
-                      {/* Point blanc plein (complété) */}
                       <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-[#191919] dark:bg-white"></div>
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex-1 min-w-0">
@@ -452,9 +429,7 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Bac général */}
                     <div className="relative pl-8">
-                      {/* Point blanc plein (complété) */}
                       <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-[#191919] dark:bg-white"></div>
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex-1 min-w-0">
@@ -473,7 +448,6 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Bouton CV */}
                 <div className="flex justify-center lg:justify-start">
                   <a
                     href={t.about.cvLink}
@@ -505,13 +479,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Section Projets */}
         <section
           id={t.sections.projects}
           className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]"
         >
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
-            {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
               <div className="flex items-end gap-6 sm:gap-8">
                 <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
@@ -550,13 +522,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Section Contact */}
         <section
           id={t.sections.contact}
           className="pt-32 pb-24 bg-gray-50 dark:bg-[#121212]"
         >
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
-            {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
               <div className="flex items-end gap-6 sm:gap-8">
                 <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
@@ -567,7 +537,6 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
-              {/* Colonne gauche - Infos */}
               <div>
                 <div className="mb-8">
                   <div className="flex items-center gap-4 mb-6">
@@ -651,7 +620,6 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Colonne droite - Formulaire */}
               <div className="lg:col-span-2">
                 <h3 className="text-[2rem] font-semibold text-[#191919] dark:text-white mb-4">
                   {t.contact.form.title}

@@ -126,7 +126,6 @@ export default function ProjectCard({
     >
       <div className="relative">
         {renderMedia()}
-        {/* Overlay "Accéder au site" */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60 backdrop-blur-sm">
           <div className="text-white text-center">
             <span className="text-xl font-bold flex items-center gap-2">

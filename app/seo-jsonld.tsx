@@ -4,7 +4,6 @@ export const siteStructuredData = {
   name: "Valentin Gil",
   url: "https://vgil.fr",
   sameAs: [
-    // Ajoutez vos profils publics si vous en avez
     "https://github.com/valentin-gil",
     "https://www.linkedin.com/in/valentin-gil/",
   ],

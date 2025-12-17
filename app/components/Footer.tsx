@@ -12,9 +12,7 @@ export default function Footer() {
   return (
     <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-750">
       <div className="max-w-7xl mx-auto px-6 sm:px-6 py-10 sm:py-12">
-        {/* Trois colonnes */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
-          {/* Colonne 1 - À propos */}
           <div>
             <h3 className="text-[2rem] font-semibold mb-3 sm:mb-4 text-gray-900 dark:text-white">
               Valentin Gil
@@ -24,7 +22,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Colonne 2 - Navigation */}
           <div>
             <h3 className="text-2xl font-semibold mb-3 sm:mb-4 text-gray-900 dark:text-white">
               {t.footer.navigation}
@@ -126,13 +123,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Colonne 3 - Contact & Réseaux */}
           <div>
             <h3 className="text-2xl font-semibold mb-3 sm:mb-4 text-gray-900 dark:text-white">
               {t.footer.contact.title}
             </h3>
 
-            {/* Email */}
             <div className="mb-3 sm:mb-4">
               <a
                 href="mailto:contact@vgil.fr"
@@ -151,7 +146,6 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* Localisation */}
             <div className="mb-3 sm:mb-4">
               <div className="flex items-center gap-2 text-sm sm:text-base text-gray-700 dark:text-gray-300">
                 <svg
@@ -170,7 +164,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Réseaux sociaux */}
             <div>
               <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
                 {t.footer.contact.follow}
@@ -217,10 +210,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Séparateur */}
         <div className="border-t border-gray-200 dark:border-gray-750 mb-6"></div>
 
-        {/* Copyright et liens légaux */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-center md:text-left">
           <p className="text-sm text-gray-700 dark:text-gray-300">
             © {new Date().getFullYear()} Valentin Gil. {t.footer.rights}

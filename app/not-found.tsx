@@ -10,9 +10,7 @@ export default function NotFound() {
   return (
     <main>
       <ThemeProvider>
-        {/* Section avec Beams en fond - 100vh */}
         <div className="relative h-screen">
-          {/* Beams en arrière-plan - chargé intelligemment */}
           <div className="absolute inset-0 w-full h-full -z-10">
             <Suspense
               fallback={
@@ -33,7 +31,6 @@ export default function NotFound() {
 
           <Navbar />
 
-          {/* Icônes sociales en bas à gauche */}
           <div className="absolute bottom-8 left-8 flex flex-col gap-3">
             <a
               href="https://linkedin.com/in/valentin-gil"
@@ -94,14 +91,12 @@ export default function NotFound() {
             </a>
           </div>
 
-          {/* Contenu de la première section */}
           <div
             className="flex h-full flex-col items-center justify-center p-24"
             role="main"
             aria-label="Contenu principal"
           >
             <div className="relative mb-8">
-              {/* SVG pour mobile */}
               <svg
                 className="absolute top-10 left-1/2 -translate-x-1/2 -z-10 h-[9rem] md:hidden"
                 viewBox="0 0 400 150"
@@ -151,7 +146,6 @@ export default function NotFound() {
                   404
                 </text>
               </svg>
-              {/* SVG pour tablette */}
               <svg
                 className="absolute top-18 left-1/2 -translate-x-1/2 -z-10 h-[12rem] hidden md:block lg:hidden"
                 viewBox="0 0 500 150"
@@ -192,7 +186,6 @@ export default function NotFound() {
                   404
                 </text>
               </svg>
-              {/* SVG pour desktop */}
               <svg
                 className="absolute top-24 left-1/2 -translate-x-1/2 -z-10 h-[16rem] hidden lg:block"
                 viewBox="0 0 600 150"

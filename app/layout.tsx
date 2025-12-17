@@ -12,7 +12,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const geist = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  display: "swap", // Améliore FCP et LCP
+  display: "swap",
   preload: true,
 });
 
@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
-  preload: false, // Chargement différé pour la police mono
+  preload: false,
 });
 
 export const metadata: Metadata = {

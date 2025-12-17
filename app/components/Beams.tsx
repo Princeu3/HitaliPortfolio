@@ -114,7 +114,6 @@ const CanvasWrapper: FC<{ children: ReactNode }> = ({ children }) => {
   const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
-    // Démarre la transition après le montage
     const timer = setTimeout(() => setOpacity(1), 100);
     return () => clearTimeout(timer);
   }, []);
@@ -315,10 +314,8 @@ const Beams: FC<BeamsProps> = ({
     [speed, noiseIntensity, scale, isDarkMode]
   );
 
-  // Mettre à jour la couleur des beams quand le mode change
   useEffect(() => {
     if (meshRef.current && meshRef.current.material) {
-      // Mode sombre: beams noirs / Mode clair: beams blancs
       const color = isDarkMode ? "#000000" : "#bbbbbb";
       const rgbColor = hexToNormalizedRGB(color);
       meshRef.current.material.uniforms.diffuse.value.setRGB(
@@ -429,13 +426,10 @@ const MergedPlanes = forwardRef<
     [count, width, height]
   );
 
-  // Optimisation: Limiter le framerate à 30fps et pause quand inactif
   const lastUpdate = useRef(0);
   useFrame((_, delta) => {
-    // Pause si tab inactive (Page Visibility API)
     if (typeof document !== "undefined" && document.hidden) return;
 
-    // Throttle à 30fps (1000ms / 30 = ~33ms)
     const now = performance.now();
     if (now - lastUpdate.current < 33) return;
     lastUpdate.current = now;

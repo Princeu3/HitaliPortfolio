@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 
-// Lazy load Beams uniquement quand visible
 const Beams = dynamic(() => import("./Beams"), {
   ssr: false,
   loading: () => null,
@@ -24,7 +23,6 @@ export default function LazyBeams(props: LazyBeamsProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Charge immédiatement si l'utilisateur a une bonne connexion et un device puissant
     const shouldLoadImmediately = () => {
       // @ts-expect-error navigator.deviceMemory n'est pas standard
       const hasGoodDevice = navigator.deviceMemory ? navigator.deviceMemory >= 4 : true;
@@ -34,14 +32,12 @@ export default function LazyBeams(props: LazyBeamsProps) {
     };
 
     if (shouldLoadImmediately()) {
-      // Charge après 500ms pour laisser le main thread se libérer pendant Lighthouse
       const timer = setTimeout(() => {
         setShouldLoad(true);
       }, 500);
       return () => clearTimeout(timer);
     }
 
-    // Sinon, utilise Intersection Observer
     const currentContainer = containerRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
@@ -50,7 +46,7 @@ export default function LazyBeams(props: LazyBeamsProps) {
         }
       },
       {
-        rootMargin: "200px", // Charge 200px avant d'être visible
+        rootMargin: "200px",
       }
     );
 

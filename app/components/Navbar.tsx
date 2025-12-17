@@ -63,7 +63,6 @@ export default function Navbar() {
       >
         <div className="backdrop-blur-sm bg-white/10 dark:bg-black/10 border border-gray-800/30 dark:border-white/30 rounded-full px-8 sm:px-12 shadow-lg">
           <div className="flex justify-between items-center h-14">
-            {/* Logo */}
             <div className="flex-shrink-0">
               {isLegalPage ? (
                 <Link
@@ -88,7 +87,6 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Menu Desktop */}
             <div className="hidden md:flex md:items-center ml-8">
               <ul className="flex items-baseline space-x-2">
                 {isLegalPage ? (
@@ -230,7 +228,6 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Bouton menu mobile */}
             <div className="md:hidden ml-4 flex items-center gap-2">
               <ModeToggle />
               <button
@@ -278,7 +275,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Menu Mobile Plein Écran */}
       {isMenuOpen && (
         <div
           className={`md:hidden fixed inset-0 z-40 bg-gray-50 dark:bg-[#101010] ${

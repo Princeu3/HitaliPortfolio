@@ -7,7 +7,6 @@ export function useLanguage() {
   const [language, setLanguage] = useState<Language>("fr");
 
   useEffect(() => {
-    // Détecte la langue du navigateur au montage
     const browserLang = navigator.language.toLowerCase();
     const detectedLang = browserLang.startsWith("fr") ? "fr" : "en";
     setLanguage(detectedLang);
