@@ -17,7 +17,7 @@ export default function Footer() {
             <h3 className="text-[2rem] font-semibold mb-3 sm:mb-4 text-gray-900 dark:text-white">
               Valentin Gil
             </h3>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-gray-600 dark:text-gray-400 md:pr-5">
               {t.footer.description}
             </p>
           </div>
