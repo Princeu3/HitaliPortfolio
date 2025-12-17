@@ -334,7 +334,9 @@ export default function Home() {
                     src="/valentin-gil.jpg"
                     alt="Valentin Gil"
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 288px, 288px"
                     className="object-cover object-top"
+                    priority
                   />
                   <div className="absolute bottom-3 left-3 px-3 py-1.5 bg-black/70 dark:bg-white/80 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300">
                     <p className="text-xs text-white dark:text-black font-medium">
@@ -545,6 +547,7 @@ export default function Home() {
                         src="/valentin-gil.jpg"
                         alt="Valentin Gil"
                         fill
+                        sizes="96px"
                         className="object-cover object-top"
                       />
                     </div>
