@@ -21,7 +21,7 @@ export const translations = {
       },
     },
     about: {
-      title: "À Propos",
+      title: "À propos",
       tags: {
         location: "Angoulême",
         webDev: "Développement Web",
