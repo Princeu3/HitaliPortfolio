@@ -16,6 +16,11 @@ const StyledWrapper = styled.div`
     position: relative;
     cursor: pointer;
     display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .st-sunMoonThemeToggleBtn:hover {
+    transform: rotate(-15deg);
   }
 
   .st-sunMoonThemeToggleBtn .themeToggleInput {
