@@ -2,6 +2,7 @@ export const translations = {
   en: {
     sections: {
       about: "about",
+      featured: "featured",
       experience: "experience",
       research: "research",
       financePrograms: "finance-programs",
@@ -56,6 +57,20 @@ export const translations = {
       },
       viewCV: "View my Resume",
       cvLink: "/assets/Hitali_Kothari_Resume.pdf",
+    },
+    featured: {
+      title: "Featured",
+      items: [
+        {
+          id: "beloit-spotlight",
+          title: "Spotlight on Hitali Kothari '26, Concierge Intern with Belen Partners",
+          source: "Beloit College News",
+          date: "December 02, 2025",
+          author: "Sylvia López",
+          description: "Meet Hitali Kothari, a Concierge Intern and senior at Beloit College from Ichalkaranji, India, majoring in quantitative economics and minoring in finance and math. Hitali interns with Belen Partners, a private equity search fund based in Chicago, developing career-readiness skills in sourcing, outreach, and research.",
+          link: "https://www.beloit.edu/live/news/7300-spotlight-on-hitali-kothari-26-concierge-intern",
+        },
+      ],
     },
     experience: {
       title: "Experience",

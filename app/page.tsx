@@ -464,6 +464,101 @@ export default function Home() {
         </section>
 
         <section
+          id={t.sections.featured}
+          className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]"
+        >
+          <div className="max-w-7xl mx-auto px-6 sm:px-12">
+            <div className="mb-16 sm:mb-20">
+              <div className="flex items-end gap-6 sm:gap-8">
+                <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
+                  {t.featured.title}
+                </h2>
+                <div className="h-[3px] w-full bg-gray-900/30 dark:bg-white/30 mb-2"></div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6">
+              {t.featured.items.map((item) => (
+                <a
+                  key={item.id}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-white dark:bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:bg-gray-50 dark:hover:bg-[#222222] transition-all duration-300 group"
+                >
+                  <div className="p-6 md:p-8">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-3">
+                          <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-full text-xs font-medium">
+                            {item.source}
+                          </span>
+                        </div>
+                        <h3 className="text-xl md:text-2xl font-bold text-[#191919] dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                          {item.title}
+                        </h3>
+                      </div>
+                      <svg
+                        className="w-6 h-6 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
+                      <span className="flex items-center gap-1">
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                        {item.date}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                          />
+                        </svg>
+                        By {item.author}
+                      </span>
+                    </div>
+
+                    <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section
           id={t.sections.experience}
           className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]"
         >
