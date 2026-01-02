@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     "Finance student at Beloit College pursuing Quantitative Economics with minors in Finance and Mathematics. Passionate about global markets and strategic investments.",
   icons: {
     icon: [
-      { url: "/favicon.ico", type: "image/x-icon" },
       { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png", sizes: "64x64" },
     ],
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
