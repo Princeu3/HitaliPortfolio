@@ -311,7 +311,7 @@ export default function Home() {
               <div className="flex-shrink-0 w-full md:w-auto">
                 <div className="relative w-full h-80 sm:w-72 sm:h-[22rem] sm:mx-auto md:mx-0 rounded-[1.5rem] overflow-hidden group">
                   <Image
-                    src="/hitali.png"
+                    src="/hitali.jpg"
                     alt="Hitali Kothari"
                     fill
                     className="object-cover"
@@ -514,7 +514,7 @@ export default function Home() {
                   <div className="flex items-center gap-4 mb-6">
                     <div className="relative w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
                       <Image
-                        src="/hitali.png"
+                        src="/hitali.jpg"
                         alt="Hitali Kothari"
                         fill
                         className="object-cover"
