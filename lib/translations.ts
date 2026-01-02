@@ -70,6 +70,15 @@ export const translations = {
           description: "Meet Hitali Kothari, a Concierge Intern and senior at Beloit College from Ichalkaranji, India, majoring in quantitative economics and minoring in finance and math. Hitali interns with Belen Partners, a private equity search fund based in Chicago, developing career-readiness skills in sourcing, outreach, and research.",
           link: "https://www.beloit.edu/live/news/7300-spotlight-on-hitali-kothari-26-concierge-intern",
         },
+        {
+          id: "common-grant",
+          title: "Common Grant Makes Uncommon Impact",
+          source: "Beloit College News",
+          date: "October 13, 2025",
+          author: "Erin Conway",
+          description: "Featured as a Common Grant recipient for her internship at WomenVenture, a Minneapolis firm specializing in microcredit loans for women. Hitali's first experience with social impact finance taught her the power of mentorship and breaking into the market. The grant covered her commute costs, making the opportunity possible.",
+          link: "https://www.beloit.edu/live/news/7087-common-grant-makes-uncommon-impact",
+        },
       ],
     },
     experience: {
