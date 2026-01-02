@@ -198,14 +198,14 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-2 text-sm">
             <Link
-              href="/mentions-legales"
+              href="/legal"
               className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
             >
               {t.footer.legal}
             </Link>
             <span className="text-gray-700 dark:text-gray-300">•</span>
             <Link
-              href="/politique-confidentialite"
+              href="/privacy"
               className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
             >
               {t.footer.privacy}
