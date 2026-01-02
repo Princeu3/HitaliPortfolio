@@ -1,6 +1,7 @@
 "use client";
 
 import { Suspense, useState } from "react";
+import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/theme-provider";
@@ -308,13 +309,15 @@ export default function Home() {
 
             <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
               <div className="flex-shrink-0 w-full md:w-auto">
-                <div className="relative w-full h-80 sm:w-72 sm:h-[22rem] sm:mx-auto md:mx-0 rounded-[1.5rem] overflow-hidden group bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center">
-                      <span className="text-4xl font-bold text-gray-500 dark:text-gray-400">HK</span>
-                    </div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Photo coming soon</p>
-                  </div>
+                <div className="relative w-full h-80 sm:w-72 sm:h-[22rem] sm:mx-auto md:mx-0 rounded-[1.5rem] overflow-hidden group">
+                  <Image
+                    src="/hitali.png"
+                    alt="Hitali Kothari"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 288px"
+                    priority
+                  />
                 </div>
               </div>
 
@@ -509,8 +512,14 @@ export default function Home() {
               <div>
                 <div className="mb-8">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="relative w-24 h-24 rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-gray-500 dark:text-gray-400">HK</span>
+                    <div className="relative w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                      <Image
+                        src="/hitali.png"
+                        alt="Hitali Kothari"
+                        fill
+                        className="object-cover"
+                        sizes="96px"
+                      />
                     </div>
                     <div>
                       <h3 className="text-[2rem] font-bold text-[#191919] dark:text-white mb-1 translate-y-[-5px]">
