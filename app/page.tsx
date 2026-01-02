@@ -495,6 +495,169 @@ export default function Home() {
         </section>
 
         <section
+          id={t.sections.research}
+          className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]"
+        >
+          <div className="max-w-7xl mx-auto px-6 sm:px-12">
+            <div className="mb-16 sm:mb-20">
+              <div className="flex items-end gap-6 sm:gap-8">
+                <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
+                  {t.research.title}
+                </h2>
+                <div className="h-[3px] w-full bg-gray-900/30 dark:bg-white/30 mb-2"></div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6">
+              {t.research.papers.map((paper) => (
+                <div
+                  key={paper.id}
+                  className="bg-white dark:bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:bg-gray-50 dark:hover:bg-[#222222] transition-all duration-300 group"
+                >
+                  <div className="p-6 md:p-8">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                      <div className="flex-1">
+                        <div className="flex items-start gap-3 mb-2">
+                          <svg
+                            className="w-6 h-6 text-[#191919] dark:text-white flex-shrink-0 mt-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                            />
+                          </svg>
+                          <h3 className="text-xl md:text-2xl font-bold text-[#191919] dark:text-white">
+                            {paper.title}
+                          </h3>
+                        </div>
+                        <p className="text-lg font-medium text-gray-700 dark:text-gray-300 ml-9">
+                          {paper.institution}
+                        </p>
+                      </div>
+                      <span className="px-3 py-1 bg-[#e5e5e5]/80 dark:bg-[#2a2a2a]/80 rounded-full text-xs font-medium text-[#191919] dark:text-white whitespace-nowrap self-start">
+                        {paper.type}
+                      </span>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4 ml-9">
+                      <span className="flex items-center gap-1">
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                        {paper.date}
+                      </span>
+                      {paper.supervisor && (
+                        <span className="flex items-center gap-1">
+                          <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                            />
+                          </svg>
+                          {paper.supervisor}
+                        </span>
+                      )}
+                    </div>
+
+                    <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed mb-6 ml-9">
+                      {paper.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2 mb-6 ml-9">
+                      {paper.skills.map((skill, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 bg-gray-100 dark:bg-[#2a2a2a] text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="ml-9">
+                      <a
+                        href={paper.pdfLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#191919] dark:bg-white text-white dark:text-[#191919] rounded-lg text-sm font-semibold hover:opacity-80 transition-opacity duration-300"
+                      >
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                          />
+                        </svg>
+                        View Paper (PDF)
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section
+          id={t.sections.financePrograms}
+          className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]"
+        >
+          <div className="max-w-7xl mx-auto px-6 sm:px-12">
+            <div className="mb-16 sm:mb-20">
+              <div className="flex items-end gap-6 sm:gap-8">
+                <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
+                  {t.financePrograms.title}
+                </h2>
+                <div className="h-[3px] w-full bg-gray-900/30 dark:bg-white/30 mb-2"></div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {t.financePrograms.programs.map((program) => (
+                <ExperienceCard
+                  key={program.id}
+                  title={program.title}
+                  company={program.company}
+                  type={program.type}
+                  date={program.date}
+                  location={program.location}
+                  description={program.description}
+                  skills={program.skills}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section
           id={t.sections.contact}
           className="pt-32 pb-24 bg-gray-50 dark:bg-[#121212]"
         >
