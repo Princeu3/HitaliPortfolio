@@ -1,18 +1,17 @@
 export const siteStructuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Valentin Gil",
-  url: "https://vgil.fr",
+  name: "Hitali Kothari",
+  url: "https://hitalikothari.com",
   sameAs: [
-    "https://github.com/valentin-gil",
-    "https://www.linkedin.com/in/valentin-gil/",
+    "https://www.linkedin.com/in/hitalikothari/",
   ],
   jobTitle:
-    "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
+    "Finance Student | Quantitative Economics at Beloit College",
   description:
-    "Portfolio de Valentin Gil, étudiant de 2e année en BUT MMI à l'IUT d'Angoulême.",
-  worksFor: {
-    "@type": "Organization",
-    name: "Valentin Gil",
+    "Portfolio of Hitali Kothari, a senior at Beloit College pursuing Quantitative Economics with minors in Finance and Mathematics.",
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Beloit College",
   },
 };

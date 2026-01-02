@@ -59,7 +59,7 @@ export default function Navbar() {
     <>
       <nav
         className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[calc(100%-3rem)] md:w-auto"
-        aria-label="Navigation principale"
+        aria-label="Main navigation"
       >
         <div className="backdrop-blur-sm bg-white/10 dark:bg-black/10 border border-gray-800/30 dark:border-white/30 rounded-full px-8 sm:px-12 shadow-lg">
           <div className="flex justify-between items-center h-14">
@@ -118,15 +118,15 @@ export default function Navbar() {
                       </li>
                     </Link>
                     <Link
-                      href={`/#${t.sections.projects}`}
+                      href={`/#${t.sections.experience}`}
                       className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group"
                     >
                       <li className="group overflow-hidden relative whitespace-nowrap">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">
-                          {t.nav.projects}
+                          {t.nav.experience}
                         </div>
                         <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-                          {t.nav.projects}
+                          {t.nav.experience}
                         </div>
                       </li>
                     </Link>
@@ -183,21 +183,21 @@ export default function Navbar() {
                       </li>
                     </a>
                     <a
-                      href={`#${t.sections.projects}`}
+                      href={`#${t.sections.experience}`}
                       onClick={(e) => {
                         e.preventDefault();
                         document
-                          .querySelector(`#${t.sections.projects}`)
+                          .querySelector(`#${t.sections.experience}`)
                           ?.scrollIntoView({ behavior: "smooth" });
                       }}
                       className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group"
                     >
                       <li className="group overflow-hidden relative whitespace-nowrap">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">
-                          {t.nav.projects}
+                          {t.nav.experience}
                         </div>
                         <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-                          {t.nav.projects}
+                          {t.nav.experience}
                         </div>
                       </li>
                     </a>
@@ -281,7 +281,7 @@ export default function Navbar() {
             isClosing ? "animate-fade-out" : "animate-fade-in"
           }`}
           role="menu"
-          aria-label="Menu mobile"
+          aria-label="Mobile menu"
         >
           <div
             className={`flex flex-col items-center justify-center h-screen ${
@@ -311,11 +311,11 @@ export default function Navbar() {
                   </li>
                   <li role="none" className="animate-fade-in-delay-3">
                     <Link
-                      href={`/#${t.sections.projects}`}
+                      href={`/#${t.sections.experience}`}
                       className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block"
                       role="menuitem"
                     >
-                      {t.nav.projects}
+                      {t.nav.experience}
                     </Link>
                   </li>
                   <li role="none" className="animate-fade-in-delay-4">
@@ -362,18 +362,18 @@ export default function Navbar() {
                   </li>
                   <li role="none" className="animate-fade-in-delay-3">
                     <a
-                      href={`#${t.sections.projects}`}
+                      href={`#${t.sections.experience}`}
                       onClick={(e) => {
                         e.preventDefault();
                         document
-                          .querySelector(`#${t.sections.projects}`)
+                          .querySelector(`#${t.sections.experience}`)
                           ?.scrollIntoView({ behavior: "smooth" });
                         handleLinkClick();
                       }}
                       className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block"
                       role="menuitem"
                     >
-                      {t.nav.projects}
+                      {t.nav.experience}
                     </a>
                   </li>
                   <li role="none" className="animate-fade-in-delay-4">

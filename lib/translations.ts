@@ -1,225 +1,15 @@
 export const translations = {
-  fr: {
-    sections: {
-      about: "a-propos",
-      projects: "projets",
-      contact: "contact",
-    },
-    nav: {
-      returnHomepage: "Retour à l'accueil",
-      home: "Accueil",
-      about: "À propos",
-      projects: "Projets",
-      contact: "Contact",
-      modeToggle: "Basculer entre le thème clair et sombre",
-      burger: {
-        openMenu: "Ouvrir le menu",
-        closeMenu: "Fermer le menu",
-        open: "Ouvrir",
-        close: "Fermer",
-        menu: "le menu",
-      },
-    },
-    about: {
-      title: "À propos",
-      tags: {
-        location: "Angoulême",
-        webDev: "Développement Web",
-        webDesign: "Web Design",
-        uxUi: "UX/UI",
-      },
-      description:
-        "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême. Passionné par le développement web et le design, je crée des expériences utilisateur intuitives et esthétiques en combinant design et développement.",
-      education: {
-        title: "Mon parcours",
-        iut: {
-          location: "IUT d'Angoulême",
-          degree: "BUT Métiers du Multimédia et de l'Internet",
-          date: "2024 - 2027",
-        },
-        epitech: {
-          location: "Epitech Technology - Bordeaux",
-          degree: "Ingénierie logicielle",
-          date: "2023 - 2024",
-        },
-        highschool: {
-          location: "Lycée Les Iris - Lormont",
-          degree: "Baccalauréat général obtenu",
-          date: "Juillet 2023",
-        },
-      },
-      viewCV: "Voir mon CV",
-      cvLink: "/assets/GIL_Valentin_CV.pdf",
-    },
-    projects: {
-      title: "Projets",
-      seeProject: "Accéder au site",
-      cineroule: {
-        description:
-          "Site web interactif permettant aux utilisateurs de voter pour leurs designs d'affiches de films préférés. Interface intuitive avec système de vote en temps réel et options d'accessibilité.",
-        date: "14/06/2025",
-      },
-      mmiPlanning: {
-        description:
-          "Application web pour consulter son emploi du temps et ceux des autres groupes d'élèves, actualisé en temps réel avec possibilité de partager les cours entre utilisateurs.",
-        date: "08/09/2025",
-      },
-    },
-    contact: {
-      title: "Contact",
-      infos: {
-        available: "Disponible",
-        usefulLinks: "Liens utiles :",
-      },
-      form: {
-        title: "Envoyez-moi un message",
-        lastName: "Nom",
-        firstName: "Prénom",
-        email: "Email",
-        message: "Message",
-        send: "Envoyer",
-        sending: "Envoi en cours...",
-        success: "Message envoyé avec succès !",
-        error: "Une erreur s'est produite. Veuillez réessayer.",
-      },
-    },
-    footer: {
-      description:
-        "Étudiant en BUT MMI passionné par le développement web et la création d'expériences numériques modernes et accessibles.",
-      navigation: "Navigation",
-      contact: {
-        title: "Contact & Réseaux",
-        follow: "Me suivre :",
-      },
-      rights: "Tous droits réservés.",
-      legal: "Mentions Légales",
-      privacy: "Politique de Confidentialité",
-    },
-    legal: {
-      title: "Mentions Légales",
-      1: {
-        title: "1. Éditeur du site",
-        editedBy: "Ce site est édité par :",
-        address: "Adresse :",
-        email: "Email :",
-      },
-      2: {
-        title: "2. Hébergement",
-        hostedBy: "Ce site est hébergé par :",
-        address: "340 S Lemon Ave #4133 Walnut, CA 91789, États-Unis",
-        phone: "Téléphone : (559) 288-7060",
-        website: "Site web :",
-        email: "Email :",
-      },
-      3: {
-        title: "3. Propriété intellectuelle",
-        content:
-          "L'ensemble des éléments du site (textes, images, graphismes, logos, etc.) sont, sauf mention contraire, la propriété exclusive de Valentin Gil. <br />Toute reproduction, modification, distribution ou utilisation, totale ou partielle, de ces éléments sans autorisation écrite préalable est strictement interdite et constitue une violation des droits d'auteur. <br />Certaines ressources utilisées sur le site (polices, icônes, bibliothèques JavaScript) restent la propriété de leurs auteurs respectifs et sont utilisées conformément à leurs licenses.",
-      },
-      4: {
-        title: "4. Données personnelles",
-        content:
-          "Les informations recueillies via le formulaire de contact sont utilisées uniquement pour répondre aux demandes envoyées par l'utilisateur. Les données sont conservées pour une durée maximale de 3 ans, sauf obligation légale contraire, et ne sont jamais revendues à des tiers. Le site utilise Vercel Analytics, un service fourni par Vercel Inc., afin de mesurer la fréquentation et l'utilisation du site. Les données collectées sont anonymisées et ne permettent pas d'identifier directement l'utilisateur. Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression de vos données personnelles. Pour exercer ce droit, vous pouvez envoyer une demande à l'adresse suivante :",
-      },
-      5: {
-        title: "5. Responsabilité",
-        content:
-          "L'éditeur du site ne pourra être tenu responsable des erreurs ou omissions présentes sur le site, ou de tout problème technique rencontré par l'utilisateur. Le site peut contenir des liens hypertextes vers d'autres sites internet. L'éditeur n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leurs contenus.",
-      },
-      6: {
-        title: "6. Cookies",
-        content:
-          "Le site n'utilise que des cookies nécessaires à son bon fonctionnement. Aucun cookie de suivi ou de publicité n'est utilisé. Vous pouvez désactiver les cookies dans les paramètres de votre navigateur, mais cela peut affecter certaines fonctionnalités du site.",
-      },
-    },
-    privacy: {
-      title: "Politique de Confidentialité",
-      lastUpdated: "Dernière mise à jour : 21 octobre 2025",
-      1: {
-        title: "1. Données collectées",
-        intro:
-          "Lorsque vous utilisez le formulaire de contact, les informations suivantes peuvent être collectées :",
-        list: {
-          name: "Nom et prénom",
-          email: "Adresse email",
-          message: "Message envoyé via le formulaire",
-        },
-        vercelAnalytics:
-          "Le site utilise également Vercel Analytics, un service qui recueille des données de navigation sous forme anonymisée (statistiques de visite, pages consultées, temps de chargement, etc.). Ces données ne permettent pas d'identifier directement l'utilisateur.",
-      },
-      2: {
-        title: "2. Finalité de la collecte",
-        intro:
-          "Les données collectées via le formulaire sont utilisées uniquement pour :",
-        list: {
-          respond: "Répondre aux demandes envoyées par l'utilisateur.",
-          follow: "Assurer le suivi des échanges si nécessaire.",
-        },
-        outro:
-          "Les donneés issues des outils d'analyse sont utilisées uniquement pour améliorer le fonctionnement et l'expérience utilisateur du site.",
-      },
-      3: {
-        title: "3. Base légale du traitement",
-        intro: "Le traitement des données repose sur :",
-        list: {
-          legitimateInterest:
-            "L'intérêt légitime de l'éditeur du site pour répondre aux demandes et assurer le suivi de ses échanges.",
-          consent:
-            "Le consentement explicite de l'utilisateur pour l'envoi d'informations via le formulaire.",
-        },
-      },
-      4: {
-        title: "4. Durée de conservation",
-        list: {
-          form: "Données issues du formulaire de contact : conservées pour une durée maximale de 3 ans à compter du dernier échange.",
-          analytics:
-            "Données issues des statistiques anonymisées (Vercel Analytics) : conservées conformément à la politique de conservation de Vercel Inc.",
-        },
-      },
-      5: {
-        title: "5. Destinataires des données",
-        content:
-          "Les données sont destinées uniquement à l'éditeur du site, Valentin Gil, et ne sont jamais transmises ni revendues à des tiers. Certaines données de navigation anonymisées peuvent être traitées par Vercel Inc., en sa qualité d'hébergement et d'analyse.",
-      },
-      6: {
-        title: "6. Droits des utilisateurs",
-        intro:
-          "Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :",
-        list: {
-          access: "Droit d'accès à vos données",
-          rectification: "Droit de rectification",
-          deletion: "Droit à l'effacement (\"droit à l'oubli\")",
-          opposition: "Droit d'opposition",
-          limitation: "Droit de limitation du traitement",
-          portability: "Droit à la portabilité des données (si applicable)",
-        },
-        outro:
-          "Pour exercer vos droits, vous pouvez envoyer une demande à l'adresse suivante :",
-        cnil: "Si vous estimez, après avoir contacté l'éditeur, que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la CNIL",
-      },
-      7: {
-        title: "7. Sécurité des données",
-        content:
-          "L'éditeur met en œuvre les mesures techniques et organisationnelles appropriées pour protéger les données personnelles contre toute perte, accès non autorisé, divulgation ou altération.",
-      },
-      8: {
-        title: "8. Modifications de la politique",
-        content:
-          "La présente politique de confidentialité peut être mise à jour à tout moment afin de s'adapter aux évolutions légales ou techniques. La date de dernière mise à jour est indiquée en haut de page.",
-      },
-    },
-  },
   en: {
     sections: {
       about: "about",
-      projects: "projects",
+      experience: "experience",
       contact: "contact",
     },
     nav: {
       returnHomepage: "Return to homepage",
       home: "Home",
       about: "About",
-      projects: "Projects",
+      experience: "Experience",
       contact: "Contact",
       modeToggle: "Toggle between light and dark theme",
       burger: {
@@ -233,53 +23,147 @@ export const translations = {
     about: {
       title: "About",
       tags: {
-        location: "Angoulême",
-        webDev: "Web Development",
-        webDesign: "Web Design",
-        uxUi: "UX/UI",
+        location: "Beloit, WI",
+        finance: "Finance & Research",
+        economics: "Quantitative Economics",
+        analysis: "Financial Analysis",
       },
       description:
-        "Second-year student in Multimedia and Internet Technologies at the Institute of Technology of Angoulême. Passionate about web development and design, I create intuitive and aesthetic user experiences by combining design and development.",
+        "I am an international student pursuing a Bachelor of Arts in Quantitative Economics with minors in Finance and Mathematics at Beloit College, set to graduate in May 2026. My passion for finance stems from a deep curiosity about global markets and the power of strategic investments to drive growth. Studying abroad in Hong Kong deepened my global perspective, allowing me to engage with international markets and diverse economic systems firsthand.",
+      quote: "\"Success doesn't come from what you do occasionally. It comes from what you do consistently.\"",
       education: {
-        title: "My Education",
-        iut: {
-          location: "Institute of Technology of Angoulême",
-          degree: "Bachelor's degree in Multimedia and Internet Technologies",
-          date: "2024 - 2027",
+        title: "Education",
+        beloit: {
+          location: "Beloit College",
+          degree: "Bachelor of Arts - Econometrics and Quantitative Economics",
+          date: "Aug 2022 - May 2026",
+          details: "Minors in Finance and Mathematics",
         },
-        epitech: {
-          location: "Epitech Technology - Bordeaux",
-          degree: "Software Engineering",
-          date: "2023 - 2024",
+        lingnan: {
+          location: "Lingnan University, Hong Kong",
+          degree: "Exchange Program - Banking, Corporate Finance, and Securities Law",
+          date: "Aug 2024 - Dec 2024",
         },
         highschool: {
-          location: "High School - Lormont",
-          degree: "French General Baccalaureate",
-          date: "July 2023",
+          location: "Sanjay Ghodawat Institute",
+          degree: "High School Diploma - Grade: 97.1%",
+          date: "Apr 2014 - May 2020",
         },
       },
-      viewCV: "View my CV",
-      cvLink: "/assets/GIL_Valentin_CV_English.pdf",
+      viewCV: "View my Resume",
+      cvLink: "/assets/Hitali_Kothari_Resume.pdf",
     },
-    projects: {
-      title: "Projects",
-      seeProject: "View website",
-      cineroule: {
-        description:
-          "Interactive website allowing users to vote for their favorite movie poster designs. Intuitive interface with real-time voting system and accessibility options.",
-        date: "2025-06-14",
-      },
-      mmiPlanning: {
-        description:
-          "Web application to view one's schedule and those of other student groups, updated in real-time with the ability to share classes between users.",
-        date: "2025-09-08",
-      },
+    experience: {
+      title: "Experience",
+      readMore: "Read more",
+      experiences: [
+        {
+          id: "belen-partners",
+          title: "Investment Analyst",
+          company: "Belen Partners",
+          type: "Internship",
+          date: "Jun 2025 - Present",
+          location: "Chicago, Illinois",
+          description: "Working on deal sourcing and financial modeling for investment opportunities. Placement through Impact Beloit Consulting Firm.",
+          skills: ["Deal Sourcing", "Financial Modeling"],
+        },
+        {
+          id: "womenventure",
+          title: "Lending Intern",
+          company: "WomenVenture",
+          type: "Internship",
+          date: "Jun 2025 - Sep 2025",
+          location: "Minneapolis, Minnesota",
+          description: "Supporting loan operations and financial analysis for women-owned businesses. Training provided by Associated Bank.",
+          skills: ["Loan Operations", "Financial Analysis", "Nonprofit Organizations"],
+        },
+        {
+          id: "associated-bank",
+          title: "Internship Trainee",
+          company: "Associated Bank",
+          type: "Full-time",
+          date: "Jun 2025 - Aug 2025",
+          location: "Minnesota",
+          description: "WomenVenture x Associated Bank program focusing on commercial banking and financial institutions.",
+          skills: ["Financial Institutions", "Commercial Banking", "Accounting"],
+        },
+        {
+          id: "orix",
+          title: "Private Credit Bridge Program",
+          company: "ORIX Corporation USA",
+          type: "Contract",
+          date: "Jul 2025",
+          location: "Remote",
+          description: "Participated in the ORIX USA Private Credit Bridge Program, gaining exposure to private credit markets and deal development.",
+          skills: ["Private Credit", "Deal Development"],
+        },
+        {
+          id: "cervano",
+          title: "Analyst",
+          company: "Cervano Capital",
+          type: "Internship",
+          date: "Jan 2025 - May 2025",
+          location: "Southern California",
+          description: "Conducted market research and financial statement analysis for a private equity firm based in Southern California.",
+          skills: ["Market Research", "Financial Statement Analysis", "Communication"],
+        },
+        {
+          id: "us-bank",
+          title: "Access to Ascend Program",
+          company: "U.S. Bank",
+          type: "Contract",
+          date: "Feb 2025 - Apr 2025",
+          location: "Remote",
+          description: "Selected for the U.S. Bank Access to Ascend Bridge Program focusing on impact finance and commercial banking.",
+          skills: ["Impact Finance", "Commercial Banking"],
+        },
+        {
+          id: "kayne-anderson",
+          title: "Real Estate Debt Program",
+          company: "Kayne Anderson",
+          type: "Contract",
+          date: "Nov 2024 - Dec 2024",
+          location: "Remote",
+          description: "Completed the Kayne Anderson Real Estate Debt Fellowship Program, learning about real estate finance and debt restructuring.",
+          skills: ["Real Estate", "Debt Restructuring"],
+        },
+        {
+          id: "morgan-stanley",
+          title: "Wall Street Bound Scholar",
+          company: "Morgan Stanley",
+          type: "Part-time",
+          date: "Jul 2024 - Dec 2024",
+          location: "New York (Remote)",
+          description: "Selected as a Wall Street Bound Scholar, gaining exposure to financial services and investment banking.",
+          skills: ["Financial Analysis", "Networking", "Financial Modeling"],
+        },
+        {
+          id: "wsb",
+          title: "Scholar",
+          company: "Wall Street Bound, Inc",
+          type: "Part-time",
+          date: "Jan 2024 - May 2024",
+          location: "New York",
+          description: "Participated in Wall Street Bound's program, developing skills in financial analysis, networking, and accounting.",
+          skills: ["Financial Analysis", "Financial Institutions", "Accounting"],
+        },
+        {
+          id: "joindre",
+          title: "Research Intern",
+          company: "Joindre Portfolio Management Services",
+          type: "Internship",
+          date: "Jun 2023 - Jul 2023",
+          location: "Kolhapur, Maharashtra, India",
+          description: "Conducted financial analysis and statistical data analysis for portfolio management at one of India's leading portfolio management firms.",
+          skills: ["Financial Analysis", "Statistical Data Analysis", "Investment Portfolio Management"],
+        },
+      ],
     },
     contact: {
       title: "Contact",
       infos: {
-        available: "Available",
-        usefulLinks: "Useful links:",
+        available: "Open to opportunities",
+        usefulLinks: "Connect with me:",
       },
       form: {
         title: "Send me a message",
@@ -295,11 +179,11 @@ export const translations = {
     },
     footer: {
       description:
-        "Student in Multimedia and Internet Technologies passionate about web development and creating modern and accessible digital experiences.",
+        "Finance student passionate about global markets, strategic investments, and financial research. Senior at Beloit College.",
       navigation: "Navigation",
       contact: {
         title: "Contact & Networks",
-        follow: "Follow me :",
+        follow: "Connect with me:",
       },
       rights: "All rights reserved.",
       legal: "Legal Notices",
@@ -324,12 +208,12 @@ export const translations = {
       3: {
         title: "3. Intellectual Property",
         content:
-          "All elements of the site (texts, images, graphics, logos, etc.) are, unless otherwise stated, the exclusive property of Valentin Gil. <br />Any reproduction, modification, distribution, or use, in whole or in part, of these elements without prior written authorization is strictly prohibited and constitutes a violation of copyright. <br />Some resources used on the site (fonts, icons, JavaScript libraries) remain the property of their respective authors and are used in accordance with their licenses.",
+          "All elements of the site (texts, images, graphics, logos, etc.) are, unless otherwise stated, the exclusive property of Hitali Kothari. <br />Any reproduction, modification, distribution, or use, in whole or in part, of these elements without prior written authorization is strictly prohibited and constitutes a violation of copyright.",
       },
       4: {
         title: "4. Personal Data",
         content:
-          "The information collected via the contact form is used solely to respond to requests sent by the user. Data is retained for a maximum of 3 years, unless otherwise required by law, and is never sold to third parties. The site uses Vercel Analytics, a service provided by Vercel Inc., to measure site traffic and usage. The collected data is anonymized and does not allow direct identification of the user. In accordance with the General Data Protection Regulation (GDPR), you have the right to access, rectify, object to, and delete your personal data. To exercise this right, you can send a request to the following address:",
+          "The information collected via the contact form is used solely to respond to requests sent by the user. Data is retained for a maximum of 3 years, unless otherwise required by law, and is never sold to third parties. The site uses Vercel Analytics, a service provided by Vercel Inc., to measure site traffic and usage. The collected data is anonymized and does not allow direct identification of the user. In accordance with applicable data protection regulations, you have the right to access, rectify, object to, and delete your personal data. To exercise this right, you can send a request to the following address:",
       },
       5: {
         title: "5. Responsibility",
@@ -344,7 +228,7 @@ export const translations = {
     },
     privacy: {
       title: "Privacy Policy",
-      lastUpdated: "Last updated: October 21, 2025",
+      lastUpdated: "Last updated: January 1, 2026",
       1: {
         title: "1. Collected Data",
         intro:
@@ -389,12 +273,12 @@ export const translations = {
       5: {
         title: "5. Data Recipients",
         content:
-          "The data is intended solely for the site editor, Valentin Gil, and is never transmitted or sold to third parties. Some anonymized browsing data may be processed by Vercel Inc. in its capacity as host and analyst.",
+          "The data is intended solely for the site editor, Hitali Kothari, and is never transmitted or sold to third parties. Some anonymized browsing data may be processed by Vercel Inc. in its capacity as host and analyst.",
       },
       6: {
         title: "6. User Rights",
         intro:
-          "In accordance with the General Data Protection Regulation (GDPR), you have the following rights:",
+          "In accordance with applicable data protection regulations, you have the following rights:",
         list: {
           access: "Right to access your data",
           rectification: "Right to rectification",
@@ -405,7 +289,7 @@ export const translations = {
         },
         outro:
           "To exercise your rights, you can send a request to the following address:",
-        cnil: "If you believe, after contacting the editor, that your rights are not respected, you can file a complaint with the CNIL",
+        cnil: "If you believe that your rights are not respected, you can file a complaint with the appropriate data protection authority.",
       },
       7: {
         title: "7. Data Security",
@@ -422,4 +306,4 @@ export const translations = {
 };
 
 export type Language = keyof typeof translations;
-export type TranslationKey = typeof translations.fr;
+export type TranslationKey = typeof translations.en;

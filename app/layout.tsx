@@ -24,10 +24,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vgil.fr"),
-  title: "Valentin Gil - Portfolio",
+  metadataBase: new URL("https://hitalikothari.com"),
+  title: "Hitali Kothari - Portfolio",
   description:
-    "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
+    "Finance student at Beloit College pursuing Quantitative Economics with minors in Finance and Mathematics. Passionate about global markets and strategic investments.",
   icons: {
     icon: [
       { url: "/favicon.ico", type: "image/x-icon" },
@@ -37,34 +37,30 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   alternates: {
-    canonical: "https://vgil.fr",
-    languages: {
-      "fr": "https://vgil.fr",
-      "x-default": "https://vgil.fr",
-    },
+    canonical: "https://hitalikothari.com",
   },
   openGraph: {
-    title: "Valentin Gil - Portfolio",
+    title: "Hitali Kothari - Portfolio",
     description:
-      "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
-    url: "https://vgil.fr",
-    siteName: "Valentin Gil - Portfolio",
+      "Finance student at Beloit College pursuing Quantitative Economics with minors in Finance and Mathematics. Passionate about global markets and strategic investments.",
+    url: "https://hitalikothari.com",
+    siteName: "Hitali Kothari - Portfolio",
     images: [
       {
         url: "/thumbnail.png",
         width: 1080,
         height: 1080,
-        alt: "Valentin Gil",
+        alt: "Hitali Kothari",
       },
     ],
-    locale: "fr_FR",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Valentin Gil - Portfolio",
+    title: "Hitali Kothari - Portfolio",
     description:
-      "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
+      "Finance student at Beloit College pursuing Quantitative Economics with minors in Finance and Mathematics. Passionate about global markets and strategic investments.",
     images: ["/thumbnail.png"],
   },
 };
@@ -79,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           key="ldjson"

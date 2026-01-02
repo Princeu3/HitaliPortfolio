@@ -1,17 +1,16 @@
 "use client";
 
 import { Suspense, useState } from "react";
-import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/theme-provider";
 import LazyBeams from "./components/LazyBeams";
-import ProjectCard from "./components/ProjectCard";
+import ExperienceCard from "./components/ExperienceCard";
 import { useLanguage } from "@/lib/useLanguage";
 
 export default function Home() {
   const { t } = useLanguage();
-  
+
   const [formData, setFormData] = useState({
     nom: "",
     prenom: "",
@@ -44,7 +43,7 @@ export default function Home() {
         setSubmitStatus("error");
       }
     } catch (error) {
-      console.error("Erreur:", error);
+      console.error("Error:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -86,7 +85,7 @@ export default function Home() {
 
           <div className="absolute bottom-8 left-8 flex flex-col gap-3">
             <a
-              href="https://linkedin.com/in/valentin-gil"
+              href="https://www.linkedin.com/in/hitalikothari/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-6 h-6 flex items-center justify-center text-gray-900 dark:text-white hover:opacity-60 transition-opacity duration-300"
@@ -102,27 +101,7 @@ export default function Home() {
               </svg>
             </a>
             <a
-              href="https://github.com/valentin-gil"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-6 h-6 flex items-center justify-center text-gray-900 dark:text-white hover:opacity-60 transition-opacity duration-300"
-              aria-label="GitHub"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </a>
-            <a
-              href="mailto:contact@vgil.fr"
+              href="mailto:hitalikothari@gmail.com"
               className="w-6 h-6 flex items-center justify-center text-gray-900 dark:text-white hover:opacity-60 transition-opacity duration-300"
               aria-label="Email"
             >
@@ -147,12 +126,12 @@ export default function Home() {
           <div
             className="flex h-full flex-col items-center justify-center p-24"
             role="main"
-            aria-label="Contenu principal"
+            aria-label="Main content"
           >
             <div className="relative mb-8">
               <svg
                 className="absolute top-3 left-1/2 -translate-x-1/2 -z-10 h-[6rem] w-auto max-w-[95vw] md:hidden"
-                viewBox="0 0 600 150"
+                viewBox="0 0 700 150"
                 preserveAspectRatio="xMidYMid meet"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
@@ -194,14 +173,14 @@ export default function Home() {
                   className="text-name-mobile font-bold"
                   fill="transparent"
                   strokeWidth="2"
-                  style={{ fontSize: "94px", fontFamily: "inherit" }}
+                  style={{ fontSize: "80px", fontFamily: "inherit" }}
                 >
-                  Valentin Gil
+                  Hitali Kothari
                 </text>
               </svg>
               <svg
                 className="absolute top-7 left-1/2 -translate-x-1/2 -z-10 h-[8rem] hidden md:block lg:hidden"
-                viewBox="0 0 800 150"
+                viewBox="0 0 900 150"
                 preserveAspectRatio="xMidYMid meet"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
@@ -234,14 +213,14 @@ export default function Home() {
                   className="font-bold fill-transparent"
                   stroke="url(#strokeGradientTablet)"
                   strokeWidth="2"
-                  style={{ fontSize: "112px", fontFamily: "inherit" }}
+                  style={{ fontSize: "100px", fontFamily: "inherit" }}
                 >
-                  Valentin Gil
+                  Hitali Kothari
                 </text>
               </svg>
               <svg
                 className="absolute top-12 left-1/2 -translate-x-1/2 -z-10 h-[9rem] hidden lg:block"
-                viewBox="0 0 800 150"
+                viewBox="0 0 900 150"
                 preserveAspectRatio="xMidYMid meet"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
@@ -274,13 +253,13 @@ export default function Home() {
                   className="font-bold fill-transparent"
                   stroke="url(#strokeGradientDesktop)"
                   strokeWidth="2"
-                  style={{ fontSize: "133px", fontFamily: "inherit" }}
+                  style={{ fontSize: "120px", fontFamily: "inherit" }}
                 >
-                  Valentin Gil
+                  Hitali Kothari
                 </text>
               </svg>
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-center relative z-10 whitespace-nowrap">
-                Valentin Gil
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-center relative z-10 whitespace-nowrap">
+                Hitali Kothari
               </h1>
             </div>
 
@@ -329,19 +308,12 @@ export default function Home() {
 
             <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
               <div className="flex-shrink-0 w-full md:w-auto">
-                <div className="relative w-full h-80 sm:w-72 sm:h-[22rem] sm:mx-auto md:mx-0 rounded-[1.5rem] overflow-hidden group">
-                  <Image
-                    src="/valentin-gil.jpg"
-                    alt="Valentin Gil"
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 288px, 288px"
-                    className="object-cover object-top"
-                    priority
-                  />
-                  <div className="absolute bottom-3 left-3 px-3 py-1.5 bg-black/70 dark:bg-white/80 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <p className="text-xs text-white dark:text-black font-medium">
-                      📸 Arthur Binchet
-                    </p>
+                <div className="relative w-full h-80 sm:w-72 sm:h-[22rem] sm:mx-auto md:mx-0 rounded-[1.5rem] overflow-hidden group bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center">
+                      <span className="text-4xl font-bold text-gray-500 dark:text-gray-400">HK</span>
+                    </div>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Photo coming soon</p>
                   </div>
                 </div>
               </div>
@@ -349,10 +321,10 @@ export default function Home() {
               <div className="flex-1">
                 <div className="mb-6">
                   <h3 className="text-3xl sm:text-4xl font-medium text-gray-900 dark:text-white">
-                    Valentin
+                    Hitali
                   </h3>
                   <h4 className="text-5xl sm:text-6xl font-bold text-gray-900 dark:text-white">
-                    Gil
+                    Kothari
                   </h4>
                 </div>
 
@@ -372,18 +344,22 @@ export default function Home() {
                     {t.about.tags.location}
                   </span>
                   <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-[#e5e5e5]/80 dark:bg-[#2a2a2a]/80 rounded-full text-xs sm:text-sm font-medium text-[#191919] dark:text-white transition-colors">
-                    {t.about.tags.webDev}
+                    {t.about.tags.finance}
                   </span>
                   <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-[#e5e5e5]/80 dark:bg-[#2a2a2a]/80 rounded-full text-xs sm:text-sm font-medium text-[#191919] dark:text-white transition-colors">
-                    {t.about.tags.webDesign}
+                    {t.about.tags.economics}
                   </span>
                   <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-[#e5e5e5]/80 dark:bg-[#2a2a2a]/80 rounded-full text-xs sm:text-sm font-medium text-[#191919] dark:text-white transition-colors">
-                    {t.about.tags.uxUi}
+                    {t.about.tags.analysis}
                   </span>
                 </div>
 
-                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-3xl leading-relaxed mb-12">
+                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-3xl leading-relaxed mb-6">
                   {t.about.description}
+                </p>
+
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 italic max-w-3xl leading-relaxed mb-12">
+                  {t.about.quote}
                 </p>
 
                 <div className="mb-8">
@@ -402,14 +378,17 @@ export default function Home() {
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex-1 min-w-0">
                           <h6 className="text-lg font-bold text-[#191919] dark:text-white uppercase">
-                            {t.about.education.iut.location}
+                            {t.about.education.beloit.location}
                           </h6>
                           <p className="text-base font-medium text-gray-700 dark:text-gray-300">
-                            {t.about.education.iut.degree}
+                            {t.about.education.beloit.degree}
+                          </p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">
+                            {t.about.education.beloit.details}
                           </p>
                         </div>
                         <span className="text-sm italic text-gray-600 dark:text-gray-400 whitespace-nowrap flex-shrink-0">
-                          {t.about.education.iut.date}
+                          {t.about.education.beloit.date}
                         </span>
                       </div>
                     </div>
@@ -419,14 +398,14 @@ export default function Home() {
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex-1 min-w-0">
                           <h6 className="text-lg font-bold text-[#191919] dark:text-white uppercase">
-                            {t.about.education.epitech.location}
+                            {t.about.education.lingnan.location}
                           </h6>
                           <p className="text-base font-medium text-gray-700 dark:text-gray-300">
-                            {t.about.education.epitech.degree}
+                            {t.about.education.lingnan.degree}
                           </p>
                         </div>
                         <span className="text-sm italic text-gray-600 dark:text-gray-400 whitespace-nowrap flex-shrink-0">
-                          {t.about.education.epitech.date}
+                          {t.about.education.lingnan.date}
                         </span>
                       </div>
                     </div>
@@ -482,44 +461,32 @@ export default function Home() {
         </section>
 
         <section
-          id={t.sections.projects}
+          id={t.sections.experience}
           className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]"
         >
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
             <div className="mb-16 sm:mb-20">
               <div className="flex items-end gap-6 sm:gap-8">
                 <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
-                  {t.projects.title}
+                  {t.experience.title}
                 </h2>
                 <div className="h-[3px] w-full bg-gray-900/30 dark:bg-white/30 mb-2"></div>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <ProjectCard
-                images={[
-                  "/mmi-planning-1.png",
-                  "/mmi-planning-2.png",
-                  "/mmi-planning-3.png",
-                ]}
-                title="MMI Planning"
-                description={t.projects.mmiPlanning.description}
-                date={t.projects.mmiPlanning.date}
-                tags={["React", "TypeScript", "Vite"]}
-                siteUrl="https://mmi-planning.vgil.fr/"
-              />
-              <ProjectCard
-                images={[
-                  "/cineroule-1.png",
-                  "/cineroule-2.png",
-                  "/cineroule-3.png",
-                ]}
-                title="Cineroule"
-                description={t.projects.cineroule.description}
-                date={t.projects.cineroule.date}
-                tags={["PHP", "CSS", "JavaScript"]}
-                siteUrl="https://vgil.alwaysdata.net/s2-cine-itinerant"
-              />
+              {t.experience.experiences.map((exp) => (
+                <ExperienceCard
+                  key={exp.id}
+                  title={exp.title}
+                  company={exp.company}
+                  type={exp.type}
+                  date={exp.date}
+                  location={exp.location}
+                  description={exp.description}
+                  skills={exp.skills}
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -542,18 +509,12 @@ export default function Home() {
               <div>
                 <div className="mb-8">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="relative w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
-                      <Image
-                        src="/valentin-gil.jpg"
-                        alt="Valentin Gil"
-                        fill
-                        sizes="96px"
-                        className="object-cover object-top"
-                      />
+                    <div className="relative w-24 h-24 rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-gray-500 dark:text-gray-400">HK</span>
                     </div>
                     <div>
                       <h3 className="text-[2rem] font-bold text-[#191919] dark:text-white mb-1 translate-y-[-5px]">
-                        Valentin Gil
+                        Hitali Kothari
                       </h3>
                       <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-100 dark:bg-green-900/30 border border-green-600 dark:border-green-500 rounded-full text-sm font-medium text-green-700 dark:text-green-400 leading-none translate-y-[-5px]">
                         <span className="relative inline-flex">
@@ -572,7 +533,7 @@ export default function Home() {
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     <a
-                      href="https://linkedin.com/in/valentin-gil"
+                      href="https://www.linkedin.com/in/hitalikothari/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2 bg-[#0A66C2] text-white rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
@@ -586,30 +547,11 @@ export default function Home() {
                       </svg>
                       <span className="translate-y-[-1px]">LinkedIn</span>
                     </a>
-                    <a
-                      href="https://github.com/valentin-gil"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-[#191919] dark:bg-white text-white dark:text-[#191919] rounded-full text-sm font-medium hover:opacity-80 transition-opacity"
-                    >
-                      <svg
-                        className="w-4 h-4"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span className="translate-y-[-1px]">GitHub</span>
-                    </a>
                   </div>
                 </div>
 
                 <a
-                  href="mailto:contact@vgil.fr"
+                  href="mailto:hitalikothari@gmail.com"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-gray-200 dark:bg-[#222222] text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-[#2a2a2a] transition-colors"
                 >
                   <svg
@@ -619,7 +561,7 @@ export default function Home() {
                   >
                     <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
                   </svg>
-                  <span className="translate-y-[-1px]">contact@vgil.fr</span>
+                  <span className="translate-y-[-1px]">hitalikothari@gmail.com</span>
                 </a>
               </div>
 
