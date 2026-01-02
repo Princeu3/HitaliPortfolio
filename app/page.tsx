@@ -572,19 +572,84 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {t.experience.experiences.map((exp) => (
-                <ExperienceCard
-                  key={exp.id}
-                  title={exp.title}
-                  company={exp.company}
-                  type={exp.type}
-                  date={exp.date}
-                  location={exp.location}
-                  description={exp.description}
-                  skills={exp.skills}
-                />
-              ))}
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gray-300 dark:bg-gray-700 md:-translate-x-1/2"></div>
+
+              <div className="space-y-12">
+                {t.experience.experiences.map((exp, index) => (
+                  <div
+                    key={exp.id}
+                    className={`relative flex flex-col md:flex-row gap-8 ${
+                      index % 2 === 0 ? "md:flex-row-reverse" : ""
+                    }`}
+                  >
+                    {/* Timeline dot */}
+                    <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-[#191919] dark:bg-white rounded-full md:-translate-x-1/2 translate-y-2 z-10 ring-4 ring-gray-50 dark:ring-[#121212]"></div>
+
+                    {/* Date for mobile */}
+                    <div className="md:hidden pl-8 text-sm font-medium text-gray-500 dark:text-gray-400">
+                      {exp.date}
+                    </div>
+
+                    {/* Content card */}
+                    <div className={`ml-8 md:ml-0 md:w-[calc(50%-2rem)] ${index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"}`}>
+                      <div className="bg-white dark:bg-[#1a1a1a] rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 group">
+                        <div className="flex items-start justify-between gap-4 mb-3">
+                          <div>
+                            <h3 className="text-xl font-bold text-[#191919] dark:text-white mb-1">
+                              {exp.title}
+                            </h3>
+                            <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
+                              {exp.company}
+                            </p>
+                          </div>
+                          <span className="px-3 py-1 bg-[#e5e5e5]/80 dark:bg-[#2a2a2a]/80 rounded-full text-xs font-medium text-[#191919] dark:text-white whitespace-nowrap">
+                            {exp.type}
+                          </span>
+                        </div>
+
+                        <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
+                          <span className="hidden md:flex items-center gap-1">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            {exp.date}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                            </svg>
+                            {exp.location}
+                          </span>
+                        </div>
+
+                        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                          {exp.description}
+                        </p>
+
+                        <div className="flex flex-wrap gap-2">
+                          {exp.skills.map((skill, skillIndex) => (
+                            <span
+                              key={skillIndex}
+                              className="px-3 py-1 bg-gray-100 dark:bg-[#2a2a2a] text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Date label for desktop */}
+                    <div className={`hidden md:flex items-start pt-2 md:w-[calc(50%-2rem)] ${index % 2 === 0 ? "md:ml-auto md:justify-start md:pl-8" : "md:mr-auto md:justify-end md:pr-8"}`}>
+                      <span className="text-sm font-semibold text-[#191919] dark:text-white bg-gray-100 dark:bg-[#2a2a2a] px-4 py-2 rounded-full">
+                        {exp.date}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -735,19 +800,84 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {t.financePrograms.programs.map((program) => (
-                <ExperienceCard
-                  key={program.id}
-                  title={program.title}
-                  company={program.company}
-                  type={program.type}
-                  date={program.date}
-                  location={program.location}
-                  description={program.description}
-                  skills={program.skills}
-                />
-              ))}
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gray-300 dark:bg-gray-700 md:-translate-x-1/2"></div>
+
+              <div className="space-y-12">
+                {t.financePrograms.programs.map((program, index) => (
+                  <div
+                    key={program.id}
+                    className={`relative flex flex-col md:flex-row gap-8 ${
+                      index % 2 === 0 ? "md:flex-row-reverse" : ""
+                    }`}
+                  >
+                    {/* Timeline dot */}
+                    <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-[#191919] dark:bg-white rounded-full md:-translate-x-1/2 translate-y-2 z-10 ring-4 ring-gray-50 dark:ring-[#121212]"></div>
+
+                    {/* Date for mobile */}
+                    <div className="md:hidden pl-8 text-sm font-medium text-gray-500 dark:text-gray-400">
+                      {program.date}
+                    </div>
+
+                    {/* Content card */}
+                    <div className={`ml-8 md:ml-0 md:w-[calc(50%-2rem)] ${index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"}`}>
+                      <div className="bg-white dark:bg-[#1a1a1a] rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 group">
+                        <div className="flex items-start justify-between gap-4 mb-3">
+                          <div>
+                            <h3 className="text-xl font-bold text-[#191919] dark:text-white mb-1">
+                              {program.title}
+                            </h3>
+                            <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
+                              {program.company}
+                            </p>
+                          </div>
+                          <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-full text-xs font-medium whitespace-nowrap">
+                            {program.type}
+                          </span>
+                        </div>
+
+                        <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
+                          <span className="hidden md:flex items-center gap-1">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            {program.date}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                            </svg>
+                            {program.location}
+                          </span>
+                        </div>
+
+                        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                          {program.description}
+                        </p>
+
+                        <div className="flex flex-wrap gap-2">
+                          {program.skills.map((skill, skillIndex) => (
+                            <span
+                              key={skillIndex}
+                              className="px-3 py-1 bg-gray-100 dark:bg-[#2a2a2a] text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Date label for desktop */}
+                    <div className={`hidden md:flex items-start pt-2 md:w-[calc(50%-2rem)] ${index % 2 === 0 ? "md:ml-auto md:justify-start md:pl-8" : "md:mr-auto md:justify-end md:pr-8"}`}>
+                      <span className="text-sm font-semibold text-[#191919] dark:text-white bg-gray-100 dark:bg-[#2a2a2a] px-4 py-2 rounded-full">
+                        {program.date}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
